@@ -1,0 +1,65 @@
+body{
+    font: normal 16px/25px "futura-pt",Arial,"Helvetica Neue",Helvetica,sans-serif;   
+    -webkit-font-smoothing: antialiased;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.logo{
+    max-width:  118px; 
+    margin-top: -12px;    
+    transition: max-width 1s;
+    position: absolute;
+}
+
+.logo:hover {
+    max-width: 300px !important;
+    transition: max-width 1s;
+}
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    height: 40px;
+}
+
+.navbar {
+    position: relative;
+    margin-bottom: 0;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+li{
+    float: left;
+    width: 150px;
+    height: auto;
+    line-height: 30px;
+    text-align: center;
+    transition: 1s ease-in-out; 
+    color: #FFF;   
+}
+
+
+li:hover  .vypln{
+    -webkit-transform: rotateX(0deg);    
+    transition: 0.3s;
+
+}
+
+li:hover  a{
+    color: #FFF !important;
+    transition: 1s;
+
+}
+
+.vypln{
+    -webkit-transform: rotateX(90deg); 
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+}
+
