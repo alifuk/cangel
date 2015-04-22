@@ -2,8 +2,8 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <link href="favicon.ico" rel="icon" type="image/png" />
-        <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+        <!-- <link href="favicon.ico" rel="icon" type="image/png" /> -->
+        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.3.min.js"></script>
 
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -15,12 +15,31 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="style.css">
+
+        <script>
+            $(document).ready(function () {
+                $("#hide").delay(2000).fadeOut(500);
+                
+            });
+
+
+        </script>
+
+
     </head>
     <body style="background:#fff; margin: 0px; ">
+
+
+
+
+
+
+
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation" >
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
+
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         <span class="sr-only">Toggle navigations</span>
@@ -35,7 +54,8 @@
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
+
+                    <ul class="nav navbar-nav" id="menu">
                         <li>
                             <div class="vypln"></div>
                             <a href="#">NOVINKY</a>
@@ -46,19 +66,22 @@
                         </li>
                         <li>
                             <div class="vypln"></div>   
-                            <a href="">PRODUKTY</a>
+                            <a href="#">PRODUKTY</a>
                         </li>
                         <li>
                             <div class="vypln"></div>   
-                            <a href="">REFERENCE</a>
+                            <a href="#">REFERENCE</a>
                         </li>                        
                         <li>
                             <div class="vypln"></div>   
-                            <a href="">KONTAKT</a>
+                            <a href="#">KONTAKT</a>
                         </li>
                     </ul>
+
+
                 </div>
                 <!-- /.navbar-collapse -->
+
             </div>
             <!-- /.container -->
         </nav> <!-- Navigation -->
@@ -72,7 +95,7 @@
         <script type="text/javascript" src="./js/jssor.js"></script>
         <script type="text/javascript" src="./js/jssor.slider.js"></script>
         <script>
-            jQuery(document).ready(function ($) {
+            $(document).ready(function ($) {
 
                 var _CaptionTransitions = [];
                 _CaptionTransitions["L"] = {$Duration: 900, x: 0.6, $Easing: {$Left: $JssorEasing$.$EaseInOutSine}, $Opacity: 2};
@@ -80,8 +103,8 @@
                 _CaptionTransitions["T"] = {$Duration: 900, y: 0.6, $Easing: {$Top: $JssorEasing$.$EaseInOutSine}, $Opacity: 2};
                 _CaptionTransitions["B"] = {$Duration: 900, y: -0.6, $Easing: {$Top: $JssorEasing$.$EaseInOutSine}, $Opacity: 2};
                 _CaptionTransitions["FADE"] = {$Duration: 900, $Opacity: 2};
-                _CaptionTransitions["FADELEFT"] = {$Duration:700,x:-0.05,$Easing:{$Left:$JssorEasing$.$EaseInOutSine},$Opacity:2};
-                _CaptionTransitions["CLIPLEFT"] = {$Duration:1200,$Clip:1,$Move:true,$Opacity:1.7,$During:{$Clip:[0.5,0.5],$Opacity:[0,0.5]}};
+                _CaptionTransitions["FADELEFT"] = {$Duration: 700, x: -0.05, $Easing: {$Left: $JssorEasing$.$EaseInOutSine}, $Opacity: 2};
+                _CaptionTransitions["CLIPLEFT"] = {$Duration: 1200, $Clip: 1, $Move: true, $Opacity: 2, $During: {$Clip: [0.0, 2], $Opacity: [0, 1]}};
                 _CaptionTransitions["ZMF|10"] = {$Duration: 900, $Zoom: 11, $Easing: {$Zoom: $JssorEasing$.$EaseOutQuad, $Opacity: $JssorEasing$.$EaseLinear}, $Opacity: 2};
                 _CaptionTransitions["RTT|10"] = {$Duration: 900, $Zoom: 11, $Rotate: 1, $Easing: {$Zoom: $JssorEasing$.$EaseOutQuad, $Opacity: $JssorEasing$.$EaseLinear, $Rotate: $JssorEasing$.$EaseInExpo}, $Opacity: 2, $Round: {$Rotate: 0.8}};
                 _CaptionTransitions["RTT|2"] = {$Duration: 900, $Zoom: 3, $Rotate: 1, $Easing: {$Zoom: $JssorEasing$.$EaseInQuad, $Opacity: $JssorEasing$.$EaseLinear, $Rotate: $JssorEasing$.$EaseInQuad}, $Opacity: 2, $Round: {$Rotate: 0.5}};
@@ -93,8 +116,8 @@
                 var options = {
                     $FillMode: 2, //[Optional] The way to fill image in slide, 0 stretch, 1 contain (keep aspect ratio and put all inside slide), 2 cover (keep aspect ratio and cover whole slide), 4 actual size, 5 contain for large image, actual size for small image, default value is 0
                     $AutoPlay: true, //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
-                    $AutoPlayInterval: 4000000, //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
-                    $PauseOnHover: 1, //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
+                    $AutoPlayInterval: 2000, //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+                    $PauseOnHover: 0, //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
 
                     $ArrowKeyNavigation: true, //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
                     $SlideEasing: $JssorEasing$.$EaseOutQuint, //[Optional] Specifies easing for right to left animation, default value is $JssorEasing$.$EaseOutQuad
@@ -132,9 +155,11 @@
                         $Steps: 1                                       //[Optional] Steps to go for each navigation request, default value is 1
                     }
                 };
-
+                
                 var jssor_slider1 = new $JssorSlider$("slider1_container", options);
-
+                
+                jssor_slider1.$GoTo(0);
+                jssor_slider1.$Pause();
                 //responsive code begin
                 //you can remove responsive code if you don't want the slider scales while window resizes
                 function ScaleSlider() {
@@ -156,23 +181,53 @@
                     else
                         window.setTimeout(ScaleSlider, 30);
                 }
-
+                
                 ScaleSlider();
 
                 $(window).bind("load", ScaleSlider);
                 $(window).bind("resize", ScaleSlider);
                 $(window).bind("orientationchange", ScaleSlider);
+
+                zobraz();
+
+                function zobraz() {
+                    $("#hide").delay(2000).fadeOut(500);
+                    setTimeout(function () {
+                        // Do something after 5 seconds
+                        jssor_slider1.$GoTo(1);
+                        jssor_slider1.$Play();
+                    }, 2000);
+                }
+
                 //responsive code end
+
+                jssor_slider1.$On($JssorSlider$.$EVT_PARK, function (slideIndex, fromIndex)
+                {
+                    //given a slide parked, the life cycle of current slide is as below,
+                    //progressBegin -- > idleBegin -- > idleEnd -- > progressEnd
+                    /*
+                     if (slideIndex == 0 && fromIndex == 1)
+                     {
+                     jssor_slider1.$Prev();
+                     }
+                     
+                     if (slideIndex == 0 && fromIndex == jssor_slider1.$SlidesCount()-1)
+                     {
+                     jssor_slider1.$Next();
+                     }*/
+                }
+                );
+
             });
         </script>
         <!-- Jssor Slider Begin -->
         <!-- To move inline styles to css file/block, please specify a class name for each element. --> 
-        <div style="position: relative; width: 100%; height: 100%; overflow: hidden;">
+        <div style="position: relative; width: 1000px; height: 100%; overflow: hidden;">
             <div style="position: relative; left: 50%; width: 5000px; text-align: center; margin-left: -2500px;">
 
                 <div id="slider1_container" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1800px; height: 900px">
                     <!-- Loading Screen -->
-                    <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+                    <div u="loading" style="position: absolute; top: 0px; left: 0px; ">
                         <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block;
                              top: 0px; left: 0px; width: 100%; height: 100%;">
                         </div>
@@ -183,158 +238,153 @@
                     <!-- Slides Container -->
                     <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1800px;
                          height: 900px; overflow: hidden;">
+
+                        <div>
+                            <img u="image" src="./img/foto/buildings.jpg" />
+                        </div>
+
+
                         <div>
                             <img u="image" src="./img/foto/drink.jpg" />
-                            
-                                <div u="caption" t="FADELEFT"  t2="NO" class="slider-header"/>The Studio
+                            <div u="caption" t="FADELEFT" du="800" t2="NO" class="slider-text"></div>
+                            <div u="caption" t="FADE"  t2="NO" class="slider-header">The Studio
+
+
+                                <div u="caption" t="CLIPLEFT" du="500" t2="FADELEFT" class="slider-text" style="width: 400px; height: 1px; margin: 0 auto 30px auto; background-color: #444;"></div>
+                                <div u="caption" t="FADELEFT" du="800" t2="FADELEFT" class="slider-text">Handmade glass from Czech Republic</div>
+
+                            </div>
+
+                        </div>
+
+                        <div>
+                            <img u="image" src="./img/foto/chess.jpg" />
+                            <div u="caption" t="FADELEFT" du="500" t2="NO" class="slider-text"></div>
+                            <div u="caption" t="FADE"  t2="NO" class="slider-header-white" style="top: 50%; ">Výrobky ze skla
+
+
+                                <div u="caption" t="CLIPLEFT" du="500" t2="FADELEFT" class="slider-text-white" style="width: 400px; height: 1px; margin: 0 auto 30px auto; background-color: #FFF;"></div>
+                                <div u="caption" t="FADELEFT" du="800" t2="FADELEFT" class="slider-text-white" >Umělecká galerie</div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div>
+                            <img u="image" src="./img/foto/cerem.jpg" />
+                            <div u="caption" t="FADELEFT" du="500" t2="NO" class="slider-text"></div>
+                            <div u="caption" t="FADE"  t2="NO" class="slider-header-white">Moderní design
+
+
+                                <div u="caption" t="CLIPLEFT" du="500" t2="FADELEFT" class="slider-text-white" style="width: 400px; height: 1px; margin: 0 auto 30px auto; background-color: #FFF;"></div>
+                                <div u="caption" t="FADELEFT" du="800" t2="FADELEFT" class="slider-text-white">tradiční postupy</div>
+
+                            </div>
+
+                        </div>
+                        <!--
+                        <div>
+                        <div u="caption" t="fade" du="4000" style="position:absolute;top:135px;left:100px;width:150px;height:30px;color:#ffffff;font-size:26px;line-height:30px;text-align:center;">RTT|10</div>
                         
+                        <img u="image" src="./img/1920/red.jpg" />
+                        <div u="caption" t="NO" t3="RTT|2" r3="137.5%" du3="3000" d3="500" style="position: absolute; width: 445px; height: 300px; top: 100px; left: 600px;">
+                        <img src="./img/new-site/c-phone.png" style="position: absolute; width: 445px; height: 300px; top: 0px; left: 0px;" />
+                        <img u="caption" t="CLIP|LR" du="4000" t2="NO" src="./img/new-site/c-jssor-slider.png" style="position: absolute; width: 102px; height: 78px; top: 70px; left: 130px;" />
+                        <img u="caption" t="ZMF|10" t2="NO" src="./img/new-site/c-text.png" style="position: absolute; width: 80px; height: 53px; top: 153px; left: 163px;" />
+                        <img u="caption" t="RTT|10" t2="NO" src="./img/new-site/c-fruit.png" style="position: absolute; width: 140px; height: 90px; top: 60px; left: 220px;" />
+                        <img u="caption" t="T" du="4000" t2="NO" src="./img/new-site/c-navigator.png" style="position: absolute; width: 200px; height: 155px; top: 57px; left: 121px;" />
+                        </div>
+                        <div u="caption" t="RTT|2" r="-75%" du="1600" d="2500" t2="NO" style="position: absolute; width: 470px; height: 220px; top: 120px; left: 650px;">
+                        <img src="./img/new-site/c-phone-horizontal.png" style="position: absolute; width: 470px; height: 220px; top: 0px; left: 0px;" />
+                        <img u="caption" t3="MCLIP|L" du3="2000" src="./img/new-site/c-slide-1.jpg" style="position: absolute; width: 379px; height: 213px; top: 4px; left: 45px;" />
+                        <img u="caption" t="MCLIP|R" du="2000" t2="NO" src="./img/new-site/c-slide-3.jpg" style="position: absolute; width: 379px; height: 213px; top: 4px; left: 45px;" />
+                        <img u="caption" t="RTTL|BR" x="500%" y="500%" du="1000" d="-3000" r="-30%" t3="L" x3="70%" du3="1600" src="./img/new-site/c-finger-pointing.png" style="position: absolute; width: 257px; height: 300px; top: 80px; left: 200px;" />
+                        <img src="./img/new-site/c-navigator-horizontal.png" style="position: absolute; width: 379px; height: 213px; top: 4px; left: 45px;" />
+                        </div>
+                        <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
+                        text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;
+                        color: #FFFFFF;">Touch Swipe Slider
+                        </div>
+                        <div style="position: absolute; width: 480px; height: 120px; top: 300px; left: 30px; padding: 5px;
+                        text-align: left; line-height: 36px; font-size: 30px;
+                        color: #FFFFFF;">
+                        Build your slider with anything, includes image, content, text, html, photo, picture
+                        </div>
+                        </div>
+                        <div>
+                        <img u="image" src="./img/1920/purple.jpg" />
+                        <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
+                        text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;
+                        color: #FFFFFF;">Touch Swipe Slider
+                        </div>
+                        <div style="position: absolute; width: 480px; height: 120px; top: 300px; left: 30px; padding: 5px;
+                        text-align: left; line-height: 36px; font-size: 30px;
+                        color: #FFFFFF;">
+                        Build your slider with anything, includes image, content, text, html, photo, picture
+                        </div>
+                        </div>
+                        <div>
+                        <img u="image" src="./img/1920/blue.jpg" />
+                        <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
+                        text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;
+                        color: #FFFFFF;">Touch Swipe Slider
+                        </div>
+                        <div style="position: absolute; width: 480px; height: 120px; top: 300px; left: 30px; padding: 5px;
+                        text-align: left; line-height: 36px; font-size: 30px;
+                        color: #FFFFFF;">
+                        Build your slider with anything, includes image, content, text, html, photo, picture
+                        </div>
+                        </div>
+                        </div>
                         
-                                <div u="caption" t="CLIPLEFT" du="1000" t2="NO" class="slider-text" style="width: 400px; margin: 0 auto; background-color: #000;"/><hr></div>
-                                <div u="caption" t="FADE" du="1000" t2="NO" class="slider-text"/>Handmade in Czech Republic</div>
-                        
-                                </div>
-                            
-                            
+                        region Bullet Navigator Skin Begin     
+                        Help: http://www.jssor.com/development/slider-with-bullet-navigator-jquery.html -->
+
+                        <!-- bullet navigator container -->
+                        <div u="navigator" class="jssorb21" style="bottom: 26px; right: 6px;">
+                            <!-- bullet navigator item prototype -->
+                            <div u="prototype"></div>
+                        </div>
+                        <!--#endregion Bullet Navigator Skin End -->
+
+                        <!--#region Arrow Navigator Skin Begin -->
+                        <!-- Help: http://www.jssor.com/development/slider-with-arrow-navigator-jquery.html -->
+
+
+
+                        <!-- Arrow Left -->
+                        <span u="arrowleft" class="jssora21l" style="top: 123px; left: 8px; ">
+                        </span>
+                        <!-- Arrow Right -->
+                        <span u="arrowright" class="jssora21r" style="top: 123px; right: 8px;">
+                        </span>
+                        <!--#endregion Arrow Navigator Skin End -->
+                        <a style="display: none" href="http://www.jssor.com">js slider</a>
+                    </div>
+                    <!-- Jssor Slider End -->
+
+                </div>
+            </div>
+
+
+            <div id="hide" style="">
+                <div class="outer">
+                    <div class="middle">
+                        <div class="inner">
+
+                            <img alt="the studio" src="logo.jpg" class="pulse">
+
+                        </div>
+                    </div>
+                </div>
+
 
             </div>
-            <div>
-                <div u="caption" t="fade" du="4000" style="position:absolute;top:135px;left:100px;width:150px;height:30px;color:#ffffff;font-size:26px;line-height:30px;text-align:center;">RTT|10</div>
-
-                <img u="image" src="./img/1920/red.jpg" />
-                <div u="caption" t="NO" t3="RTT|2" r3="137.5%" du3="3000" d3="500" style="position: absolute; width: 445px; height: 300px; top: 100px; left: 600px;">
-                    <img src="./img/new-site/c-phone.png" style="position: absolute; width: 445px; height: 300px; top: 0px; left: 0px;" />
-                    <img u="caption" t="CLIP|LR" du="4000" t2="NO" src="./img/new-site/c-jssor-slider.png" style="position: absolute; width: 102px; height: 78px; top: 70px; left: 130px;" />
-                    <img u="caption" t="ZMF|10" t2="NO" src="./img/new-site/c-text.png" style="position: absolute; width: 80px; height: 53px; top: 153px; left: 163px;" />
-                    <img u="caption" t="RTT|10" t2="NO" src="./img/new-site/c-fruit.png" style="position: absolute; width: 140px; height: 90px; top: 60px; left: 220px;" />
-                    <img u="caption" t="T" du="4000" t2="NO" src="./img/new-site/c-navigator.png" style="position: absolute; width: 200px; height: 155px; top: 57px; left: 121px;" />
-                </div>
-                <div u="caption" t="RTT|2" r="-75%" du="1600" d="2500" t2="NO" style="position: absolute; width: 470px; height: 220px; top: 120px; left: 650px;">
-                    <img src="./img/new-site/c-phone-horizontal.png" style="position: absolute; width: 470px; height: 220px; top: 0px; left: 0px;" />
-                    <img u="caption" t3="MCLIP|L" du3="2000" src="./img/new-site/c-slide-1.jpg" style="position: absolute; width: 379px; height: 213px; top: 4px; left: 45px;" />
-                    <img u="caption" t="MCLIP|R" du="2000" t2="NO" src="./img/new-site/c-slide-3.jpg" style="position: absolute; width: 379px; height: 213px; top: 4px; left: 45px;" />
-                    <img u="caption" t="RTTL|BR" x="500%" y="500%" du="1000" d="-3000" r="-30%" t3="L" x3="70%" du3="1600" src="./img/new-site/c-finger-pointing.png" style="position: absolute; width: 257px; height: 300px; top: 80px; left: 200px;" />
-                    <img src="./img/new-site/c-navigator-horizontal.png" style="position: absolute; width: 379px; height: 213px; top: 4px; left: 45px;" />
-                </div>
-                <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
-                     text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;
-                     color: #FFFFFF;">Touch Swipe Slider
-                </div>
-                <div style="position: absolute; width: 480px; height: 120px; top: 300px; left: 30px; padding: 5px;
-                     text-align: left; line-height: 36px; font-size: 30px;
-                     color: #FFFFFF;">
-                    Build your slider with anything, includes image, content, text, html, photo, picture
-                </div>
-            </div>
-            <div>
-                <img u="image" src="./img/1920/purple.jpg" />
-                <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
-                     text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;
-                     color: #FFFFFF;">Touch Swipe Slider
-                </div>
-                <div style="position: absolute; width: 480px; height: 120px; top: 300px; left: 30px; padding: 5px;
-                     text-align: left; line-height: 36px; font-size: 30px;
-                     color: #FFFFFF;">
-                    Build your slider with anything, includes image, content, text, html, photo, picture
-                </div>
-            </div>
-            <div>
-                <img u="image" src="./img/1920/blue.jpg" />
-                <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
-                     text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;
-                     color: #FFFFFF;">Touch Swipe Slider
-                </div>
-                <div style="position: absolute; width: 480px; height: 120px; top: 300px; left: 30px; padding: 5px;
-                     text-align: left; line-height: 36px; font-size: 30px;
-                     color: #FFFFFF;">
-                    Build your slider with anything, includes image, content, text, html, photo, picture
-                </div>
-            </div>
+            <!--
+             Hide End-->
         </div>
 
-        <!--#region Bullet Navigator Skin Begin -->
-        <!-- Help: http://www.jssor.com/development/slider-with-bullet-navigator-jquery.html -->
-        <style>
-            /* jssor slider bullet navigator skin 21 css */
-            /*
-            .jssorb21 div           (normal)
-            .jssorb21 div:hover     (normal mouseover)
-            .jssorb21 .av           (active)
-            .jssorb21 .av:hover     (active mouseover)
-            .jssorb21 .dn           (mousedown)
-            */
-            .jssorb21 {
-                position: absolute;
-            }
-            .jssorb21 div, .jssorb21 div:hover, .jssorb21 .av {
-                position: absolute;
-                /* size of bullet elment */
-                width: 19px;
-                height: 19px;
-                text-align: center;
-                line-height: 19px;
-                color: white;
-                font-size: 12px;
-                background: url(./img/b21.png) no-repeat;
-                overflow: hidden;
-                cursor: pointer;
-            }
-            .jssorb21 div { background-position: -5px -5px; }
-            .jssorb21 div:hover, .jssorb21 .av:hover { background-position: -35px -5px; }
-            .jssorb21 .av { background-position: -65px -5px; }
-            .jssorb21 .dn, .jssorb21 .dn:hover { background-position: -95px -5px; }
-        </style>
-        <!-- bullet navigator container -->
-        <div u="navigator" class="jssorb21" style="bottom: 26px; right: 6px;">
-            <!-- bullet navigator item prototype -->
-            <div u="prototype"></div>
-        </div>
-        <!--#endregion Bullet Navigator Skin End -->
-
-        <!--#region Arrow Navigator Skin Begin -->
-        <!-- Help: http://www.jssor.com/development/slider-with-arrow-navigator-jquery.html -->
-        <style>
-            /* jssor slider arrow navigator skin 21 css */
-            /*
-            .jssora21l                  (normal)
-            .jssora21r                  (normal)
-            .jssora21l:hover            (normal mouseover)
-            .jssora21r:hover            (normal mouseover)
-            .jssora21l.jssora21ldn      (mousedown)
-            .jssora21r.jssora21rdn      (mousedown)
-            */
-            .jssora21l, .jssora21r {
-                display: block;
-                position: absolute;
-                /* size of arrow element */
-                width: 55px;
-                height: 55px;
-                cursor: pointer;
-                background: url(./img/a21.png) center center no-repeat;
-                overflow: hidden;
-            }
-            .jssora21l { background-position: -3px -33px; }
-            .jssora21r { background-position: -63px -33px; }
-            .jssora21l:hover { background-position: -123px -33px; }
-            .jssora21r:hover { background-position: -183px -33px; }
-            .jssora21l.jssora21ldn { background-position: -243px -33px; }
-            .jssora21r.jssora21rdn { background-position: -303px -33px; }
-        </style>
-        <!-- Arrow Left -->
-        <span u="arrowleft" class="jssora21l" style="top: 123px; left: 8px; ">
-        </span>
-        <!-- Arrow Right -->
-        <span u="arrowright" class="jssora21r" style="top: 123px; right: 8px;">
-        </span>
-        <!--#endregion Arrow Navigator Skin End -->
-        <a style="display: none" href="http://www.jssor.com">js slider</a>
-    </div>
-    <!-- Jssor Slider End -->
-
-</div>
-</div>
-
-
-
-</body>
+    </body>
 </html>
 
