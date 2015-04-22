@@ -18,8 +18,9 @@
 
         <script>
             $(document).ready(function () {
+                $("#inner").delay(200).fadeIn(1000);
                 $("#hide").delay(2000).fadeOut(500);
-                
+
             });
 
 
@@ -28,11 +29,6 @@
 
     </head>
     <body style="background:#fff; margin: 0px; ">
-
-
-
-
-
 
 
         <!-- Navigation -->
@@ -155,9 +151,9 @@
                         $Steps: 1                                       //[Optional] Steps to go for each navigation request, default value is 1
                     }
                 };
-                
+
                 var jssor_slider1 = new $JssorSlider$("slider1_container", options);
-                
+
                 jssor_slider1.$GoTo(0);
                 jssor_slider1.$Pause();
                 //responsive code begin
@@ -181,7 +177,7 @@
                     else
                         window.setTimeout(ScaleSlider, 30);
                 }
-                
+
                 ScaleSlider();
 
                 $(window).bind("load", ScaleSlider);
@@ -222,7 +218,7 @@
         </script>
         <!-- Jssor Slider Begin -->
         <!-- To move inline styles to css file/block, please specify a class name for each element. --> 
-        <div style="position: relative; width: 1000px; height: 100%; overflow: hidden;">
+        <div style="position: relative; width: 100%; height: 100%; overflow: hidden;">
             <div style="position: relative; left: 50%; width: 5000px; text-align: center; margin-left: -2500px;">
 
                 <div id="slider1_container" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1800px; height: 900px">
@@ -251,7 +247,7 @@
 
 
                                 <div u="caption" t="CLIPLEFT" du="500" t2="FADELEFT" class="slider-text" style="width: 400px; height: 1px; margin: 0 auto 30px auto; background-color: #444;"></div>
-                                <div u="caption" t="FADELEFT" du="800" t2="FADELEFT" class="slider-text">Handmade glass from Czech Republic</div>
+                                <div u="caption" t="FADELEFT" du="800" t2="FADELEFT" class="slider-text" >Handmade glass from Czech Republic</div>
 
                             </div>
 
@@ -260,11 +256,11 @@
                         <div>
                             <img u="image" src="./img/foto/chess.jpg" />
                             <div u="caption" t="FADELEFT" du="500" t2="NO" class="slider-text"></div>
-                            <div u="caption" t="FADE"  t2="NO" class="slider-header-white" style="top: 50%; ">Výrobky ze skla
+                            <div u="caption" t="FADE"  t2="NO" class="slider-text white" style="top: 50%; ">Výrobky ze skla
 
 
-                                <div u="caption" t="CLIPLEFT" du="500" t2="FADELEFT" class="slider-text-white" style="width: 400px; height: 1px; margin: 0 auto 30px auto; background-color: #FFF;"></div>
-                                <div u="caption" t="FADELEFT" du="800" t2="FADELEFT" class="slider-text-white" >Umělecká galerie</div>
+                                <div u="caption" t="CLIPLEFT" du="500" t2="FADELEFT" class="slider-text white" style="width: 400px; height: 1px; margin: 0 auto 30px auto; background-color: #FFF;"></div>
+                                <div u="caption" t="FADELEFT" du="800" t2="FADELEFT" class="slider-text white" >Umělecká galerie</div>
 
                             </div>
 
@@ -274,11 +270,11 @@
                         <div>
                             <img u="image" src="./img/foto/cerem.jpg" />
                             <div u="caption" t="FADELEFT" du="500" t2="NO" class="slider-text"></div>
-                            <div u="caption" t="FADE"  t2="NO" class="slider-header-white">Moderní design
+                            <div u="caption" t="FADE"  t2="NO" class="slider-text white" style="top: 50%; ">Moderní design
 
 
-                                <div u="caption" t="CLIPLEFT" du="500" t2="FADELEFT" class="slider-text-white" style="width: 400px; height: 1px; margin: 0 auto 30px auto; background-color: #FFF;"></div>
-                                <div u="caption" t="FADELEFT" du="800" t2="FADELEFT" class="slider-text-white">tradiční postupy</div>
+                                <div u="caption" t="CLIPLEFT" du="500" t2="FADELEFT" class="slider-text white" style="width: 400px; height: 1px; margin: 0 auto 30px auto; background-color: #FFF;"></div>
+                                <div u="caption" t="FADELEFT" du="800" t2="FADELEFT" class="slider-text white">tradiční postupy</div>
 
                             </div>
 
@@ -368,10 +364,16 @@
             </div>
 
 
-            <div id="hide" style="">
+            
+            <!--
+             Hide End-->
+        </div>
+        
+        
+        <div id="hide" style="">
                 <div class="outer">
                     <div class="middle">
-                        <div class="inner">
+                        <div class="inner" id="inner">
 
                             <img alt="the studio" src="logo.jpg" class="pulse">
 
@@ -381,9 +383,6 @@
 
 
             </div>
-            <!--
-             Hide End-->
-        </div>
 
     </body>
 </html>

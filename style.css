@@ -10,7 +10,7 @@ body{
     margin: auto;
     display: block;
 
-    -webkit-animation: changeSize 5s ease-in-out .5s infinite; /* Safari 4+ */
+    -webkit-animation: changeSize 5s ease-in-out 0s infinite; /* Safari 4+ */
     animation-duration: 4s;
 }
 
@@ -37,6 +37,7 @@ body{
 .inner {
     margin-left: auto;
     margin-right: auto; 
+    display: none;
     //width: /*whatever width you want*/;
 }
 
@@ -138,41 +139,19 @@ li:hover  a{
 .slider-text{
     position: relative;
     height: 50px;
-    width: 400px;
+    width: 100%;
     top: 30px; 
     left: 0px;
     text-align: center;  
     font-size: 50px;
     font-weight: bold;
     text-transform: uppercase;
+    
 }
 
-.slider-header-white{
-    position: absolute; 
-    width: 100%; 
-    height: 132px;
-    top: 40%; 
-    left: 0px;
-    text-align: center; 
-    margin-left: auto ;
-    margin-right: auto; 
-    font-size: 50px;
+.white{
     color: #FFF;
-    font-weight: bold;
-    text-transform: uppercase;
 }
-
-.slider-text-white{
-    position: relative;
-    height: 50px;
-    top: 30px; 
-    left: 0px;
-    text-align: center;  
-    font-size: 50px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
 
 
 
