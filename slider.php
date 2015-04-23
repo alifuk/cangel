@@ -164,6 +164,7 @@
 
 
                                 <div u="caption" t="CLIPLEFT" du="500" t2="FADELEFT" class="slider-text" style="width: 400px; height: 1px; margin: 0 auto 30px auto; background-color: #444;"></div>
+                                <div u="caption" t="FADELEFT" du="800" t2="FADELEFT" class="slider-text" >Premium handmade glass</div>
 
                             </div>
 

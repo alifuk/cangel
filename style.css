@@ -61,7 +61,7 @@ body{
 
 
 .logo{
-    max-width:  118px; 
+    max-width:  135px; 
     margin-top: -12px;    
     transition: max-width 1s;
     position: absolute;
@@ -74,15 +74,71 @@ body{
 .navbar .navbar-nav {
     display: inline-block;
     float: none;
-    height: 40px;
+    /**/
 }
+
+.container-fluid{
+    //height: 40px;
+}
+
+
+.navbar-bottom {
+    bottom: 0px;
+    display: block;
+    height: 30px;
+    width: 100%;
+    position: absolute;
+    background-color: #FFF;
+    z-index: 10000;
+}
+
+.ul-dole li{
+    display: inline-block;
+    color: #0F0;
+    float: right;
+    width: 100px;
+    height: 30px;
+}
+
+.vyplnDole{
+    display: box;
+    width: 100px;
+    height: 30px;
+    background-color: #000;
+    top:0px;
+    position: absolute;
+    z-index: -37;
+    -webkit-transform: rotateX(90deg); 
+    transform: rotateX(90deg);    
+    transition: 0.3s;
+}
+
+.li-dole:hover  .vyplnDole{    
+    -webkit-transform: rotateX(0deg); 
+    transform: rotateX(0deg); 
+}
+
+.li-dole:hover {
+    
+    color: #0FF;
+}
+
+.li-dole a{
+    color: #000;
+    text-decoration: none;
+}
+
+
+/*
+.navbar-nav > li > a {padding-top:15px !important; padding-bottom:5px !important; min-height: 40px !important;}
+.navbar {min-height:32px !important; padding-bottom:5px !important;}*/
 
 .navbar {
     position: fixed;
     margin-bottom: 0;
 }
 
-.navbar .navbar-collapse {
+.navbar-center {
     text-align: center;
 }
 
@@ -93,7 +149,21 @@ li{
     line-height: 30px;
     text-align: center;
     transition: 1s ease-in-out; 
-    color: #FFF;   
+    color: #FFF;
+    list-style-type: none
+}
+
+.in li{
+    
+    transition: 0.5s ease-in-out; 
+    background-color: #FFF;
+}
+
+li a{
+    padding-top: 18px !important;
+  padding-bottom: 7px !important;
+  color: #000 !important;
+  font: normal 17px/25px "futura-pt",Arial,"Helvetica Neue",Helvetica,sans-serif; 
 }
 
 
@@ -114,7 +184,7 @@ li:hover  a{
     -webkit-transform: rotateX(90deg); 
     transform: rotateX(90deg); 
     width: 100%;
-    height: 100%;
+    height: 54px;
     background-color: #000;
     position: absolute;
     transition: 0.3s ease-in-out;

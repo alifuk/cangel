@@ -18,13 +18,18 @@
 
         <script>
             $(document).ready(function () {
+
+                //$("#hide").delay(200).fadeOut(500);
+
                 $("#inner").delay(200).fadeIn(1000);
                 var ubehlo2sec = false;
                 var nactenoGal = false;
 
+
+
                 setTimeout(function () {
                     ubehlo2sec = true;
-
+                    skryjUvod();
                 }, 2000);
 
 
@@ -62,7 +67,7 @@
 
 
     </head>
-    <body style="background:#fff; margin: 0px; ">
+    <body style="background:#fff; margin: 0px; overflow: hidden;">
 
 
         <!-- Navigation -->
@@ -70,7 +75,7 @@
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
 
-                <div class="navbar-header">
+                <div class="navbar-header" >
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         <span class="sr-only">Toggle navigations</span>
                         <span class="icon-bar"></span>
@@ -78,12 +83,12 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="#">
-                        <img src="logo.png" alt="The Studio" style="" class="logo">
+                        <img src="logo.png" alt="The Studio" style="padding: 0 0 0 20px;" class="logo">
                     </a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+                <div class="collapse navbar-collapse navbar-center " id="bs-example-navbar-collapse-1" >
 
                     <ul class="nav navbar-nav" id="menu">
                         <li>
@@ -101,11 +106,7 @@
                         <li>
                             <div class="vypln"></div>   
                             <a href="#">REFERENCE</a>
-                        </li>                        
-                        <li>
-                            <div class="vypln"></div>   
-                            <a href="#">KONTAKT</a>
-                        </li>
+                        </li>    
                     </ul>
 
 
@@ -127,21 +128,56 @@
 
 
 
-        <nav class="navbar navbar-default navbar-fixed-bottom navbar-small">
-            <div class="container-fluid">
-
-
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">
-                        <img alt="Brand" src="...">
-                    </a>
-                </div>
-
-
-
-
-
+        <nav class="navbar-bottom" >
+            <div style="float: right; width: 150px; height: 30px; padding-right: 15px;">
+            <img src="./img/foto/facebook.png" style="max-height: 30px; float: right; padding: 5px;">
+            <img src="./img/foto/instagram.png" style="max-height: 30px; float: right; padding: 5px;">
+            <img src="./img/foto/pinterest.png" style="max-height: 30px; float: right; padding: 5px;">
+            <img src="./img/foto/twitter.png" style="max-height: 30px; float: right; padding: 5px;">
             </div>
+            <ul class="ul-dole">
+
+                
+                <li class="li-dole">
+                    <a href="#">Kontakt</a> 
+                    <div class="vyplnDole"></div>
+                </li>
+                <li class="li-dole">
+                    <a href="#">Kariéra</a> 
+                    <div class="vyplnDole"></div>
+                </li>
+                <li class="li-dole">
+                    
+                    <a href="#">O nás</a> 
+                    <div class="vyplnDole"></div>
+                   
+                </li>
+
+            </ul>
+
+            <!--
+            <ul class="ikony-right" id="menu-dole">
+                <li>
+                    <div class="vypln"></div>
+                    <a href="#" onclick="hideIt()">NOVINKY</a>
+                </li>
+                <li>
+                    <div class="vypln"></div>
+                    <a href="#">SLUŽBY</a>
+                </li>
+                <li>
+                    <div class="vypln"></div>   
+                    <a href="#">PRODUKTY</a>
+                </li>
+                <li>
+                    <div class="vypln"></div>   
+                    <a href="#">REFERENCE</a>
+                </li>    
+            </ul>
+
+
+            -->
+
         </nav>
 
 
