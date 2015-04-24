@@ -17,13 +17,18 @@
         <link rel="stylesheet" href="style.css">
 
         <script>
+            var spodniObsah = "obsah1";
+            var horniObsah = "obsah2";
+                
             $(document).ready(function () {
 
-                $("#hide").delay(200).fadeOut(500);
-
+                //$("#hide").delay(200).fadeOut(500);
+                $("#"+ spodniObsah).fadeTo("normal", 0); 
                 $("#inner").delay(200).fadeIn(1000);
                 var ubehlo2sec = false;
                 var nactenoGal = false;
+
+                
 
 
 
@@ -46,28 +51,57 @@
                 function skryjUvod() {
 
                     if (nactenoGal && ubehlo2sec) {
-
                         $("#hide").delay(200).fadeOut(500);
                         jssor_slider1.$GoTo(1);
                         jssor_slider1.$Play();
                     }
-
-
                 }
 
+
+                
+
+                
+
             });
+            
+            function zobraz(stranka) {
+                    
+                    
+                    $.ajax({url: stranka+'.php',
+                        /*data: {menu: slozka},*/
+                        type: 'POST',
+                        success: function (output) {
+                            $("#"+spodniObsah).html(output);
+                            $("#"+spodniObsah).removeClass("displaynone");
+        
+                            hideAll();
+                            
+                        }
+                    });
+                    
+                    
+                }
 
 
-            function hideIt() {
-                $("#slider").fadeOut(1000);
-            }
+            
+            function hideAll() {
+                    $("#slider").fadeTo("slow", 0);
+                    $("#"+ horniObsah).fadeTo("slow", 0, function(){
+                        $(this).addClass("displaynone");
+                    });                    
+                    $("#"+ spodniObsah).fadeTo("slow", 1);
+                    
+                    tempdiv = horniObsah;
+                    horniObsah = spodniObsah;
+                    spodniObsah = tempdiv;
+                }
 
 
         </script>
 
 
     </head>
-    <body style="background:#fff; margin: 0px; overflow: hidden;">
+    <body style="background:#fff; margin: 0px; /*overflow: hidden;*/">
 
 
         <!-- Navigation -->
@@ -93,7 +127,7 @@
                     <ul class="nav navbar-nav" id="menu">
                         <li>
                             <div class="vypln"></div>
-                            <a href="#" onclick="hideIt()">NOVINKY</a>
+                            <a href="#" onclick="zobraz('novinky')">NOVINKY</a>
                         </li>
                         <li>
                             <div class="vypln"></div>
@@ -105,7 +139,7 @@
                         </li>
                         <li>
                             <div class="vypln"></div>   
-                            <a href="#">REFERENCE</a>
+                            <a href="#" onclick="zobraz('reference')">REFERENCE</a>
                         </li>    
                     </ul>
 
@@ -124,6 +158,14 @@
 
         </div>
 
+        <div id="obsah1">
+
+        </div>
+        
+        <div id="obsah2">
+
+        </div>
+
 
 
 
@@ -133,7 +175,7 @@
 
             <!-- <img src="./img/foto/copyright.gif" style="float: left; max-height: 24px; padding: 6px 0 0 15px;" /> -->
             <span style="line-height: 31px; padding-left: 20px; float: left;"> © The Studio 2015</span>
-               
+
 
 
             <div style="float: right; width: 170px; height: 30px; padding-right: 15px;">
@@ -167,13 +209,13 @@
                 <div class="jazykyBox" style="top: -68px;   left: -5px; position: relative; background-color: #FFF;">
                     <div style="width: 50px; height: 25px; padding: 5px;">RU</div>
                     <div style="width: 50px; height: 25px; padding: 5px;">EN</div>
-                    
-                        
-                       
+
+
+
                 </div>
             </span>
-            
-            
+
+
 
 
             <!--
