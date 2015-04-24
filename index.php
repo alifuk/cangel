@@ -19,7 +19,7 @@
         <script>
             $(document).ready(function () {
 
-                //$("#hide").delay(200).fadeOut(500);
+                $("#hide").delay(200).fadeOut(500);
 
                 $("#inner").delay(200).fadeIn(1000);
                 var ubehlo2sec = false;
@@ -129,15 +129,24 @@
 
 
         <nav class="navbar-bottom" >
-            <div style="float: right; width: 150px; height: 30px; padding-right: 15px;">
-            <img src="./img/foto/facebook.png" style="max-height: 30px; float: right; padding: 5px;">
-            <img src="./img/foto/instagram.png" style="max-height: 30px; float: right; padding: 5px;">
-            <img src="./img/foto/pinterest.png" style="max-height: 30px; float: right; padding: 5px;">
-            <img src="./img/foto/twitter.png" style="max-height: 30px; float: right; padding: 5px;">
+
+
+            <!-- <img src="./img/foto/copyright.gif" style="float: left; max-height: 24px; padding: 6px 0 0 15px;" /> -->
+            <span style="line-height: 31px; padding-left: 20px; float: left;"> © The Studio 2015</span>
+               
+
+
+            <div style="float: right; width: 170px; height: 30px; padding-right: 15px;">
+                <img src="./img/foto/facebook.png" class="ikonka">
+                <img src="./img/foto/instagram.png" class="ikonka">
+                <img src="./img/foto/pinterest.png" class="ikonka">
+                <img src="./img/foto/twitter.png" class="ikonka">
+                <!--<img src="./img/foto/in.png" class="ikonka"> -->
+                <img src="./img/foto/g.png" class="ikonka">
             </div>
             <ul class="ul-dole">
 
-                
+
                 <li class="li-dole">
                     <a href="#">Kontakt</a> 
                     <div class="vyplnDole"></div>
@@ -147,13 +156,25 @@
                     <div class="vyplnDole"></div>
                 </li>
                 <li class="li-dole">
-                    
+
                     <a href="#">O nás</a> 
                     <div class="vyplnDole"></div>
-                   
+
                 </li>
 
             </ul>
+            <span class="jazyky" style="line-height: 11px; padding: 0 10px; float: right;"> CS <img src="./img/foto/arrowUp.png" style="max-height: 12px;">
+                <div class="jazykyBox" style="top: -68px;   left: -5px; position: relative; background-color: #FFF;">
+                    <div style="width: 50px; height: 25px; padding: 5px;">RU</div>
+                    <div style="width: 50px; height: 25px; padding: 5px;">EN</div>
+                    
+                        
+                       
+                </div>
+            </span>
+            
+            
+
 
             <!--
             <ul class="ikony-right" id="menu-dole">
