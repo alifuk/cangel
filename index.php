@@ -19,16 +19,16 @@
         <script>
             var spodniObsah = "obsah1";
             var horniObsah = "obsah2";
-                
+
             $(document).ready(function () {
 
-                //$("#hide").delay(200).fadeOut(500);
-                $("#"+ spodniObsah).fadeTo("normal", 0); 
+                $("#hide").delay(200).fadeOut(500);
+                $("#" + spodniObsah).fadeTo("normal", 0);
                 $("#inner").delay(200).fadeIn(1000);
                 var ubehlo2sec = false;
                 var nactenoGal = false;
 
-                
+
 
 
 
@@ -58,43 +58,62 @@
                 }
 
 
-                
 
-                
+
+
 
             });
-            
+
             function zobraz(stranka) {
-                    
-                    
-                    $.ajax({url: stranka+'.php',
-                        /*data: {menu: slozka},*/
-                        type: 'POST',
-                        success: function (output) {
-                            $("#"+spodniObsah).html(output);
-                            $("#"+spodniObsah).removeClass("displaynone");
-        
-                            hideAll();
-                            
-                        }
-                    });
-                    
-                    
-                }
 
 
-            
+                $.ajax({url: stranka + '.php',
+                    /*data: {menu: slozka},*/
+                    type: 'POST',
+                    success: function (output) {
+                        $("#" + spodniObsah).html(output);
+                        $("#" + spodniObsah).removeClass("displaynone");
+
+                        hideAll();
+
+                    }
+                });
+
+
+            }
+
+
+
             function hideAll() {
-                    $("#slider").fadeTo("slow", 0);
-                    $("#"+ horniObsah).fadeTo("slow", 0, function(){
-                        $(this).addClass("displaynone");
-                    });                    
-                    $("#"+ spodniObsah).fadeTo("slow", 1);
-                    
-                    tempdiv = horniObsah;
-                    horniObsah = spodniObsah;
-                    spodniObsah = tempdiv;
+                if ($("#slider").html() === "") {
+                    pokracujHideAll();
+                } else {
+                    $("#slider").fadeTo("slow", 0, function () {
+                        $("#slider").html("");
+                        pokracujHideAll();
+                        s
+                    });
                 }
+
+
+
+
+                X
+
+
+            }
+
+            function pokracujHideAll() {
+
+                $("#" + horniObsah).fadeTo("slow", 0, function () {
+                    $(this).addClass("displaynone");
+                });
+                $("#" + spodniObsah).fadeTo("slow", 1);
+
+                tempdiv = horniObsah;
+                horniObsah = spodniObsah;
+                spodniObsah = tempdiv;
+            }
 
 
         </script>
@@ -131,7 +150,7 @@
                         </li>
                         <li>
                             <div class="vypln"></div>
-                            <a href="#">SLUŽBY</a>
+                            <a href="#" onclick="zobraz('sluzby')">SLUŽBY</a>
                         </li>
                         <li>
                             <div class="vypln"></div>   
@@ -154,14 +173,12 @@
 
 
 
-        <div id="slider">
-
-        </div>
+        <div id="slider"></div>
 
         <div id="obsah1">
 
         </div>
-        
+
         <div id="obsah2">
 
         </div>
@@ -178,7 +195,7 @@
 
 
 
-            <div style="float: right; width: 170px; height: 30px; padding-right: 15px;">
+            <div style="float: right; width: 190px; height: 30px; padding-right: 15px;">
                 <img src="./img/foto/facebook.png" class="ikonka">
                 <img src="./img/foto/instagram.png" class="ikonka">
                 <img src="./img/foto/pinterest.png" class="ikonka">
@@ -205,9 +222,9 @@
                 </li>
 
             </ul>
-            <span class="jazyky" style="line-height: 11px; padding: 0 10px; float: right;"> CS <img src="./img/foto/arrowUp.png" style="max-height: 12px;">
+            <span class="jazyky" style="line-height: 11px; padding: 0 0px; float: right;"> CS <img src="./img/foto/arrowUp.png" style="max-height: 12px;">
                 <div class="jazykyBox" style="top: -68px;   left: -5px; position: relative; background-color: #FFF;">
-                    <div style="width: 50px; height: 25px; padding: 5px;">RU</div>
+                    <div style="width: 50px; height: 25px; padding: 5px;">NJ</div>
                     <div style="width: 50px; height: 25px; padding: 5px;">EN</div>
 
 

@@ -21,7 +21,6 @@ h2 {
 .pulse{
     margin: auto;
     display: block;
-
     -webkit-animation: changeSize 5s ease-in-out 0s infinite; /* Safari 4+ */
     animation: changeSize 5s ease-in-out 0s infinite; /* Safari 4+ */
 }
@@ -36,6 +35,11 @@ h2 {
     0% {transform:scale(1)}
     50% {transform:scale(1.1)}
     100% {transform:scale(1)}
+}
+
+.zoomit{
+    -webkit-animation: changeSize 30s ease-in-out 0s infinite; /* Safari 4+ */
+    animation: changeSize 30s ease-in-out 0s infinite; /* Safari 4+ */
 }
 
 
@@ -102,6 +106,7 @@ h2 {
     position: fixed;
     background-color: #FFF;
     z-index: 10000;
+    text-transform: uppercase;
 }
 
 .ul-dole li{
@@ -209,22 +214,23 @@ li:hover  a{
 
 .ikonka:hover {
     opacity: 0.5;
-    
+
 }
 
 .jazykyBox{
-   -webkit-transform: rotateX(90deg); 
+    -webkit-transform: rotateX(90deg); 
     transform: rotateX(90deg);      
     transition: 0.3s ease-in-out;
     overflow: hidden;
     cursor: pointer;
+    width: 30px;
 }
 
 .jazyky {
     cursor: pointer;
 }
 .jazyky:hover .jazykyBox{
-     -webkit-transform: rotateX(0deg); 
+    -webkit-transform: rotateX(0deg); 
     transform: rotateX(0deg);   
 }
 
@@ -270,6 +276,13 @@ li:hover  a{
 
 
 
+
+
+
+
+
+
+
 #obsah1, #obsah2{
     position: absolute;
     top: 50px;
@@ -279,7 +292,7 @@ li:hover  a{
 
 .novinka{
     width: 100%;
-    height: 350px;
+    height: 300px;
     background-color: #FFF;
     overflow: hidden;
     clear: both;
@@ -294,17 +307,25 @@ li:hover  a{
 }
 
 .novinka img{
-    width: 60%;    
     //z-index: -1;
     overflow: hidden;
+    top: 50%;
+    margin: auto 0;
+    //min-height: 350px;
+    //position: absolute;
+}
+
+.novinkaFotka{
+    height: 300px;
 }
 
 .novinkaObsah{
     text-align: center;
     width: 40%;
-    height: 350px;
+    min-width: 400px;
+    height: 300px;
     background-color: #FFF;
-    padding-top: 60px;
+    padding-top: 20px;
     z-index: 20;
     position: absolute;  
     -webkit-transition:  1s; /* Safari */
@@ -326,6 +347,59 @@ li:hover  a{
     height: 100px;
     background-color: #F00;
 }
+
+
+
+
+.sluzbaBox{
+    width: 200%;
+    height: 100%;
+    position: fixed;    
+    -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+    left: 0%;
+    
+}
+
+.sluzbaBox:hover {
+    left: -1.75%; /* or whatever is required */
+}
+
+.sluzba {
+    width: 12.5%; /* or whatever is required */
+    text-align: center; /* ensures the image is always in the h-middle */
+    overflow: hidden; /* hide the cropped portion */
+    float: left;
+    display: inline;
+    -webkit-transition:  0.4s  ease-in-out; /* Safari */
+    transition:  0.4s  ease-in-out;    
+    opacity: 0.7;
+    
+}
+
+
+.sluzba:hover {
+    width: 16%; /* or whatever is required */
+    opacity: 1;
+}
+
+
+
+
+
+.sluzbaimg {
+    position: relative; /* allows repositioning */
+    left: 100%; /* move the whole width of the image to the right */
+    margin-left: -200%; /* magic! */
+    min-height: 100%;
+}
+
+
+
+
+
 
 
 

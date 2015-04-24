@@ -71,7 +71,7 @@
 
                 var jssor_slider1 = new $JssorSlider$("slider1_container", options);
 
-                jssor_slider1.$GoTo(0);
+                jssor_slider1.$GoTo(1);
                 jssor_slider1.$Pause();
                 //responsive code begin
                 //you can remove responsive code if you don't want the slider scales while window resizes
@@ -107,7 +107,7 @@
                     $("#hide").delay(2000).fadeOut(500);
                     setTimeout(function () {
                         // Do something after 5 seconds
-                        jssor_slider1.$GoTo(1);
+                        jssor_slider1.$GoTo(0);
                         jssor_slider1.$Play();
                     }, 2000);
                 }
@@ -152,13 +152,11 @@
                     <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1800px;
                          height: 900px; overflow: hidden;">
 
-                        <div>
-                            <img u="image" src="./img/foto/buildings.jpg" />
-                        </div>
+                        
 
 
                         <div>
-                            <img u="image" src="./img/foto/drink.jpg" />
+                            <img u="image" src="./img/foto/drink.jpg" class="zoomit"/>
                             <div u="caption" t="FADELEFT" du="800" t2="NO" class="slider-text"></div>
                             <div u="caption" t="FADE"  t2="NO" class="slider-header">The Studio
 
@@ -171,7 +169,7 @@
                         </div>
 
                         <div>
-                            <img u="image" src="./img/foto/chess.jpg" />
+                            <img u="image" src="./img/foto/chess.jpg" class="zoomit" />
                             <div u="caption" t="FADELEFT" du="500" t2="NO" class="slider-text"></div>
                             <div u="caption" t="FADE"  t2="NO" class="slider-text white" style="top: 50%; ">Výrobky ze skla
 
@@ -185,7 +183,7 @@
 
 
                         <div>
-                            <img u="image" src="./img/foto/cerem.jpg" />
+                            <img u="image" src="./img/foto/cerem.jpg" class="zoomit" />
                             <div u="caption" t="FADELEFT" du="500" t2="NO" class="slider-text"></div>
                             <div u="caption" t="FADE"  t2="NO" class="slider-text white" style="top: 50%; ">Moderní design
 
