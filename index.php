@@ -175,7 +175,7 @@
 
         <div id="slider"></div>
 
-        <div id="obsah1">
+        <div id="obsah1" >
 
         </div>
 
@@ -195,7 +195,7 @@
 
 
 
-            <div style="float: right; width: 190px; height: 30px; padding-right: 15px;">
+            <div style="float: right; width: 172px; height: 30px; padding-right: 15px;">
                 <img src="./img/foto/facebook.png" class="ikonka">
                 <img src="./img/foto/instagram.png" class="ikonka">
                 <img src="./img/foto/pinterest.png" class="ikonka">
@@ -211,12 +211,12 @@
                     <div class="vyplnDole"></div>
                 </li>
                 <li class="li-dole">
-                    <a href="#">Kariéra</a> 
+                    <a href="#" onclick="zobraz('kariera')">Kariéra</a> 
                     <div class="vyplnDole"></div>
                 </li>
                 <li class="li-dole">
 
-                    <a href="#">O nás</a> 
+                    <a href="#" onclick="zobraz('onas')">O nás</a> 
                     <div class="vyplnDole"></div>
 
                 </li>

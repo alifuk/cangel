@@ -106,7 +106,7 @@ h2 {
     position: fixed;
     background-color: #FFF;
     z-index: 10000;
-    text-transform: uppercase;
+    //text-transform: uppercase;
 }
 
 .ul-dole li{
@@ -292,7 +292,7 @@ li:hover  a{
 
 .novinka{
     width: 100%;
-    height: 300px;
+    height: 270px;
     background-color: #FFF;
     overflow: hidden;
     clear: both;
@@ -316,14 +316,14 @@ li:hover  a{
 }
 
 .novinkaFotka{
-    height: 300px;
+    height: 270px;
 }
 
 .novinkaObsah{
     text-align: center;
     width: 40%;
     min-width: 400px;
-    height: 300px;
+    height: 270px;
     background-color: #FFF;
     padding-top: 20px;
     z-index: 20;
@@ -361,10 +361,13 @@ li:hover  a{
   transition: all 0.4s ease-in-out;
     left: 0%;
     
+    
 }
 
 .sluzbaBox:hover {
-    left: -1.75%; /* or whatever is required */
+    -ms-transform: translate(-1.75%,0); /* IE 9 */
+   	-webkit-transform: translate(-1.75%,0px); /* Safari */
+    transform: translate(-1.75%,0);
 }
 
 .sluzba {
@@ -377,12 +380,25 @@ li:hover  a{
     transition:  0.4s  ease-in-out;    
     opacity: 0.7;
     
+    
+    border-style: solid;
+    border-width: 0px;
+    
+    border-top-style: none;
+    border-right-style: solid;
+    border-bottom-style: none;
+    border-left-style: solid;
+    
 }
 
 
 .sluzba:hover {
-    width: 16%; /* or whatever is required */
+    width: 15%;
     opacity: 1;
+    
+    
+    border-width: 8px;
+    
 }
 
 
@@ -395,6 +411,23 @@ li:hover  a{
     margin-left: -200%; /* magic! */
     min-height: 100%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
