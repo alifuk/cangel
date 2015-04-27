@@ -1,25 +1,33 @@
-<div class="sluzbaBox">
-    <div class="sluzba">
-        <img class="sluzbaimg" src="./img/foto/buildings.jpg" >
-        
-        <h4 style="vertical-align: middle; padding: 20px; float: left;
-    position: absolute; top:0; left 0;">
-            Zakázková výroba ručně foukaného a uměleckého skla
+<div class="sluzbaBox" id="sluzbaBox">
+    <div class="sluzba" onclick="zobraz('sluzba', 'Zakázková výroba ručně foukaného a uměleckého skla ')">
+
+        <h4 class="sluzbaText">
+            Zakázková výroba ručně foukaného a uměleckého skla 
         </h4>
-            
-        
-        
+        <img class="sluzbaimg" src="./img/foto/buildings.jpg" >
+
     </div>
-    <div class="sluzba" >
-        <img class="sluzbaimg" src="./img/foto/drink.jpg" >
+    <div class="sluzba sluzbaR" onclick="zobraz('sluzba', 'Výroba sklářských dřevěných a pecoldových forem')">
+        <h4 class="sluzbaText">
+            Výroba sklářských dřevěných a pecoldových forem
+        </h4>
+        <img class="sluzbaimg " src="./img/foto/drink.jpg" >
+
     </div>
-    <div class="sluzba">
+    <div class="sluzba sluzbaR" onclick="zobraz('sluzba', 'Broušení a vrtání skla')">
+        <h4 class="sluzbaText">
+            Broušení a vrtání skla
+        </h4>
         <img class="sluzbaimg" src="./img/foto/forest.jpg">
     </div>
-    <div class="sluzba">
+    <div class="sluzba sluzbaR" onclick="zobraz('sluzba', 'Pískování a lepení skla')">
+        <h4 class="sluzbaText">
+            Pískování a lepení skla
+        </h4>
         <img class="sluzbaimg" src="./img/foto/cerem.jpg">
     </div>
 </div>
+
 
 
 

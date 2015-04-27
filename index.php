@@ -22,6 +22,10 @@
 
             $(document).ready(function () {
 
+
+
+
+
                 $("#hide").delay(200).fadeOut(500);
                 $("#" + spodniObsah).fadeTo("normal", 0);
                 $("#inner").delay(200).fadeIn(1000);
@@ -59,14 +63,31 @@
 
 
 
+                $("#downarrow").hide();
+                $(".jazyky").hover(function () {
+
+                    $("#uparrow").hide();
+                    $("#downarrow").show();
+
+                }, function () {
+                    $("#uparrow").show();
+                    $("#downarrow").hide();
+
+
+                });
+
+
+
+
+
+
+
 
 
 
             });
 
             function zobraz(stranka) {
-
-
                 $.ajax({url: stranka + '.php',
                     /*data: {menu: slozka},*/
                     type: 'POST',
@@ -76,10 +97,48 @@
 
                         hideAll();
 
+
+
+                        /*$(".sluzbaR").mouseenter(function () {
+                         $(".sluzbaBox").addClass("boxDoleva");
+                         
+                         });
+                         
+                         $(".sluzbaR").mouseleave(function () {
+                         
+                         $(".sluzbaBox").removeClass("boxDoleva");
+                         });
+                         
+                         */
                     }
                 });
+            }
+            
+            function zobraz(stranka,parametr) {
+                $.ajax({url: stranka + '.php',
+                    data: {'param': parametr},
+                    type: 'POST',
+                    success: function (output) {
+                        $("#" + spodniObsah).html(output);
+                        $("#" + spodniObsah).removeClass("displaynone");
+
+                        hideAll();
 
 
+
+                        /*$(".sluzbaR").mouseenter(function () {
+                         $(".sluzbaBox").addClass("boxDoleva");
+                         
+                         });
+                         
+                         $(".sluzbaR").mouseleave(function () {
+                         
+                         $(".sluzbaBox").removeClass("boxDoleva");
+                         });
+                         
+                         */
+                    }
+                });
             }
 
 
@@ -91,14 +150,14 @@
                     $("#slider").fadeTo("slow", 0, function () {
                         $("#slider").html("");
                         pokracujHideAll();
-                        s
+
                     });
                 }
 
 
 
 
-                X
+
 
 
             }
@@ -154,7 +213,7 @@
                         </li>
                         <li>
                             <div class="vypln"></div>   
-                            <a href="#">PRODUKTY</a>
+                            <a href="#" onclick="zobraz('produkty')">PRODUKTY</a>
                         </li>
                         <li>
                             <div class="vypln"></div>   
@@ -222,7 +281,9 @@
                 </li>
 
             </ul>
-            <span class="jazyky" style="line-height: 11px; padding: 0 0px; float: right;"> CS <img src="./img/foto/arrowUp.png" style="max-height: 12px;">
+            <span class="jazyky" style="line-height: 11px; padding: 0 0px; float: right;"> CS 
+                <img src="./img/foto/arrowUp.png" style="max-height: 12px;" id="uparrow">
+                <img src="./img/foto/arrowDown.png"  style="max-height: 12px;" id="downarrow">
                 <div class="jazykyBox" style="top: -68px;   left: -5px; position: relative; background-color: #FFF;">
                     <div style="width: 50px; height: 25px; padding: 5px;">NJ</div>
                     <div style="width: 50px; height: 25px; padding: 5px;">EN</div>

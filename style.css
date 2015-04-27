@@ -292,7 +292,7 @@ li:hover  a{
 
 .novinka{
     width: 100%;
-    height: 270px;
+    height: 290px;
     background-color: #FFF;
     overflow: hidden;
     clear: both;
@@ -316,14 +316,14 @@ li:hover  a{
 }
 
 .novinkaFotka{
-    height: 270px;
+    height: 290px;
 }
 
 .novinkaObsah{
     text-align: center;
     width: 40%;
     min-width: 400px;
-    height: 270px;
+    height: 290px;
     background-color: #FFF;
     padding-top: 20px;
     z-index: 20;
@@ -352,21 +352,23 @@ li:hover  a{
 
 
 .sluzbaBox{
+    
     width: 200%;
     height: 100%;
     position: fixed;    
     -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     left: 0%;
-    
-    
+    cursor: pointer;
+
+
 }
 
-.sluzbaBox:hover {
+.boxDoleva {
     -ms-transform: translate(-1.75%,0); /* IE 9 */
-   	-webkit-transform: translate(-1.75%,0px); /* Safari */
+    -webkit-transform: translate(-1.75%,0px); /* Safari */
     transform: translate(-1.75%,0);
 }
 
@@ -379,29 +381,56 @@ li:hover  a{
     -webkit-transition:  0.4s  ease-in-out; /* Safari */
     transition:  0.4s  ease-in-out;    
     opacity: 0.7;
-    
-    
+
+
     border-style: solid;
     border-width: 0px;
-    
+
     border-top-style: none;
     border-right-style: solid;
     border-bottom-style: none;
     border-left-style: solid;
-    
+
 }
 
 
 .sluzba:hover {
     width: 15%;
     opacity: 1;
-    
-    
     border-width: 8px;
-    
+
 }
 
+.sluzba:hover > .sluzbaText{
+    //width: 15%;
+    
+     -webkit-transform: translate(10%, -50%);
+    transform: translate(10%, -50%);
 
+}
+
+.sluzbaText{
+
+    text-align: center;
+    font-size: 34px;
+    position: absolute;
+    z-index: 10;
+    vertical-align: middle;
+    padding: 20px;
+    /* height: 100%; */
+    display: block;
+    top: 50%;
+    /* left: 50%; */
+    -webkit-transform: translate(0%, -50%);
+    transform: translate(0%, -50%);
+    width: 12.5%;
+    overflow: hidden;
+    text-transform: uppercase;
+    
+    
+    -webkit-transition:  0.4s  ease-in-out; /* Safari */
+    transition:  0.4s  ease-in-out;  
+}
 
 
 
@@ -410,6 +439,7 @@ li:hover  a{
     left: 100%; /* move the whole width of the image to the right */
     margin-left: -200%; /* magic! */
     min-height: 100%;
+    //float: left;
 }
 
 
@@ -421,6 +451,128 @@ li:hover  a{
 
 
 
+
+
+
+
+
+
+
+
+
+.produktyBox{
+    width: 200%;
+    height: 100%;
+    position: fixed;    
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    left: 0%;
+    
+    cursor: pointer;
+
+}
+
+.boxDoleva {
+    -ms-transform: translate(-1.75%,0); /* IE 9 */
+    -webkit-transform: translate(-1.75%,0px); /* Safari */
+    transform: translate(-1.75%,0);
+}
+
+.produkt {
+    width: 8.4%; /* or whatever is required */
+    text-align: center; /* ensures the image is always in the h-middle */
+    overflow: hidden; /* hide the cropped portion */
+    float: left;
+    display: inline;
+    -webkit-transition:  0.4s  ease-in-out; /* Safari */
+    transition:  0.4s  ease-in-out;    
+    opacity: 0.7;
+
+
+    border-style: solid;
+    border-width: 0px;
+
+    border-top-style: none;
+    border-right-style: solid;
+    border-bottom-style: none;
+    border-left-style: solid;
+
+}
+
+
+.produkt:hover {
+    width: 10%;
+    opacity: 1;
+    border-width: 8px;
+
+}
+
+.produkt:hover > .sluzbaText{
+    //width: 15%;
+    
+     -webkit-transform: translate(10%, -50%);
+    transform: translate(10%, -50%);
+
+}
+
+.produktText{
+
+    text-align: center;
+    font-size: 34px;
+    position: absolute;
+    z-index: 10;
+    vertical-align: middle;
+    padding: 20px;
+    /* height: 100%; */
+    display: block;
+    top: 45%;
+    /* left: 50%; */
+    -webkit-transform: translate(0%, -50%);
+    transform: translate(0%, -50%);
+    width: 8.4%;
+    overflow: hidden;
+    text-transform: uppercase;
+    
+    
+    -webkit-transition:  0.4s  ease-in-out; /* Safari */
+    transition:  0.4s  ease-in-out;  
+}
+
+
+
+.produktimg {
+    position: relative; /* allows repositioning */
+    left: 100%; /* move the whole width of the image to the right */
+    margin-left: -200%; /* magic! */
+    min-height: 100%;
+    //float: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sProdukt{
+    width: 200px; 
+    margin: 20px; 
+    float: left;
+    height: 100%;
+}
+
+.sProdukt h4{
+    text-align: center;
+    width: 100%;
+}
 
 
 
