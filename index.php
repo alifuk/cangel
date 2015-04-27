@@ -12,6 +12,20 @@
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
+
+        <!-- styles needed by jScrollPane -->
+        <link type="text/css" href="style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+
+        <!-- latest jQuery direct from google's CDN -->
+
+        <!-- the mousewheel plugin - optional to provide mousewheel support -->
+        <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+
+        <!-- the jScrollPane script -->
+        <script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+
+
+
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="style.css">
@@ -31,7 +45,6 @@
                 $("#inner").delay(200).fadeIn(1000);
                 var ubehlo2sec = false;
                 var nactenoGal = false;
-
 
 
 
@@ -113,8 +126,8 @@
                     }
                 });
             }
-            
-            function zobraz(stranka,parametr) {
+
+            function zobraz(stranka, parametr) {
                 $.ajax({url: stranka + '.php',
                     data: {'param': parametr},
                     type: 'POST',
@@ -137,6 +150,9 @@
                          });
                          
                          */
+
+
+                        $('#produktBar').jScrollPane();
                     }
                 });
             }

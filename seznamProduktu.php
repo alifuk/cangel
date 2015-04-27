@@ -3,9 +3,9 @@ echo ' <h1 style="margin: 34px; display: block; text-align: center;"> ' . htmlsp
 ?>
 
 
-<div style="width: 80%; height: 500px;  overflow-x:scroll; margin: 0 auto;">
+<div style="width: 80%; height: 500px;  overflow-x:scroll; margin: 0 auto;" id="produktBar">
 
-    <div style="width: 5000px;">
+    <div style="width: auto;">
 
 
 
