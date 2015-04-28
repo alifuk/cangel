@@ -79,13 +79,16 @@ h2 {
 .logo{
     max-width:  135px; 
     margin-top: -12px;    
-    transition: max-width 1s;
+    transition: all 1s;
     position: absolute;
+    background-color: transparent;
 }
 
 .logo:hover {
     max-width: 300px !important;
-    transition: max-width 1s;
+    transition: all 1s;
+    background-color: #FFF;
+
 }
 .navbar .navbar-nav {
     display: inline-block;
@@ -352,7 +355,7 @@ li:hover  a{
 
 
 .sluzbaBox{
-    
+
     width: 200%;
     height: 100%;
     position: fixed;    
@@ -403,8 +406,8 @@ li:hover  a{
 
 .sluzba:hover > .sluzbaText{
     //width: 15%;
-    
-     -webkit-transform: translate(10%, -50%);
+
+    -webkit-transform: translate(10%, -50%);
     transform: translate(10%, -50%);
 
 }
@@ -426,8 +429,8 @@ li:hover  a{
     width: 12.5%;
     overflow: hidden;
     text-transform: uppercase;
-    
-    
+
+
     -webkit-transition:  0.4s  ease-in-out; /* Safari */
     transition:  0.4s  ease-in-out;  
 }
@@ -469,7 +472,7 @@ li:hover  a{
     -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
     left: 0%;
-    
+
     cursor: pointer;
 
 }
@@ -481,7 +484,7 @@ li:hover  a{
 }
 
 .produkt {
-    width: 8.4%; /* or whatever is required */
+    width: 12.5%; /* or whatever is required */
     text-align: center; /* ensures the image is always in the h-middle */
     overflow: hidden; /* hide the cropped portion */
     float: left;
@@ -503,7 +506,7 @@ li:hover  a{
 
 
 .produkt:hover {
-    width: 10%;
+    width: 14%;
     opacity: 1;
     border-width: 8px;
 
@@ -511,8 +514,8 @@ li:hover  a{
 
 .produkt:hover > .sluzbaText{
     //width: 15%;
-    
-     -webkit-transform: translate(10%, -50%);
+
+    -webkit-transform: translate(10%, -50%);
     transform: translate(10%, -50%);
 
 }
@@ -531,11 +534,11 @@ li:hover  a{
     /* left: 50%; */
     -webkit-transform: translate(0%, -50%);
     transform: translate(0%, -50%);
-    width: 8.4%;
+    width: 12.5%;
     overflow: hidden;
     text-transform: uppercase;
-    
-    
+
+
     -webkit-transition:  0.4s  ease-in-out; /* Safari */
     transition:  0.4s  ease-in-out;  
 }
@@ -559,14 +562,19 @@ li:hover  a{
 
 
 
+#produktBar{
 
+    height: 400px;
+    max-width: 80%;
+    margin: 0 auto;
+}
 
 
 .sProdukt{
     width: 200px; 
-    margin: 20px; 
-    float: left;
-    height: 100%;
+    //margin: 20px; 
+    height: 400px;
+    display: inline-table;
 }
 
 .sProdukt h4{
@@ -574,13 +582,23 @@ li:hover  a{
     width: 100%;
 }
 
+.sProdukt img{
+    width: 263px;
+    height: 302px;
+}
 
 
-
-
-
-
-
+.scroll-pane
+{
+    width: 100%;
+    height: 400px;
+    overflow: auto;
+}
+.horizontal-only
+{
+    height: auto;
+    max-height: 400px;
+}
 
 
 
@@ -657,16 +675,7 @@ li:hover  a{
 
 
 
+.glyphicon{
 
-.scroll-pane,
-.scroll-pane-arrows
-{
-	width: 100%;
-	height: 200px;
-	overflow: auto;
-}
-.horizontal-only
-{
-	height: auto;
-	max-height: 200px;
+    font-size: 28px;
 }

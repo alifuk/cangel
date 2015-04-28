@@ -34,6 +34,20 @@
             var spodniObsah = "obsah1";
             var horniObsah = "obsah2";
 
+            var api;
+            var mouseover = true;
+            var sliderPodruhe = false;
+
+            function produktyDoprava() {
+                api.scrollBy(200, 0);
+            }
+
+            function produktyDoleva() {
+                api.scrollBy(-200, 0);
+            }
+
+
+
             $(document).ready(function () {
 
 
@@ -101,6 +115,9 @@
             });
 
             function zobraz(stranka) {
+                
+                sliderPodruhe = false;
+                
                 $.ajax({url: stranka + '.php',
                     /*data: {menu: slozka},*/
                     type: 'POST',
@@ -153,6 +170,55 @@
 
 
                         $('#produktBar').jScrollPane();
+
+
+                        $('#produktBar').each(function () {
+                            var scrollPane = $(this).jScrollPane();
+                            var api = scrollPane.data('jsp');
+                            scrollPane.bind(
+                                    'mousewheel',
+                                    function (event, delta, deltaY)
+                                    {
+                                        api.scrollByY(delta * -50);
+                                        return false;
+                                    }
+                            );
+                        });
+
+
+                        api = $('#produktBar').data('jsp');
+                        $('#produktBar').jScrollPane(
+                                {
+                                    animateScroll: true,
+                                    animateDuration: 300
+
+                                }
+                        );
+                        scrolluj()
+
+                        
+                        $('.noscroll').mouseenter(function () {
+                            mouseover = false;
+                        }).mouseleave(function () {
+                            mouseover = true;
+                            scrolluj();
+                        });
+
+
+                        function scrolluj() {
+                            setTimeout(function () {
+
+                                if (mouseover) {
+                                    api.scrollBy(10, 0);
+                                    scrolluj();
+                                }
+
+                            }, 300);
+                        }
+
+
+
+
                     }
                 });
             }
@@ -211,7 +277,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="#">
-                        <img src="logo.png" alt="The Studio" style="padding: 0 0 0 20px;" class="logo">
+                        <img src="logo.png" alt="The Studio" style="padding: 0 0 0 20px;" class="logo" onclick="zobraz('slider')">
                     </a>
                 </div>
 
