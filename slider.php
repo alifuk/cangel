@@ -71,7 +71,8 @@
 
         var jssor_slider1 = new $JssorSlider$("slider1_container", options);
 
-        if (!sliderPodruhe) {
+        //alert(sliderPoprve);
+        if (sliderPoprve) {
 
             jssor_slider1.$GoTo(1);
             jssor_slider1.$Pause();
@@ -104,18 +105,24 @@
         $(window).bind("resize", ScaleSlider);
         $(window).bind("orientationchange", ScaleSlider);
 
-        
-        
-        if(!sliderPodruhe){
+
+
+        if (sliderPoprve) {
+            //alert("poprve");
             zobraz();
         }
         function zobraz() {
-            $("#hide").delay(2000).fadeOut(500);
-            setTimeout(function () {
-                // Do something after 5 seconds
-                jssor_slider1.$GoTo(0);
-                jssor_slider1.$Play();
-            }, 2000);
+            //alert(sliderPoprve);
+            if (sliderPoprve) {
+                
+                $("#hide").delay(2000).fadeOut(500);
+                setTimeout(function () {
+                    // Do something after 5 seconds
+                    jssor_slider1.$GoTo(0);
+                    jssor_slider1.$Play();
+                }, 2000);
+            }
+
         }
 
         //responsive code end

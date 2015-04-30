@@ -24,6 +24,8 @@
         <!-- the jScrollPane script -->
         <script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
 
+        <script type="text/javascript" src="//api.mapy.cz/loader.js"></script>
+        <script type="text/javascript">Loader.load();</script>
 
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,7 +38,7 @@
 
             var api;
             var mouseover = true;
-            var sliderPodruhe = false;
+            var sliderPoprve = true;
 
             function produktyDoprava() {
                 api.scrollBy(200, 0);
@@ -50,16 +52,11 @@
 
             $(document).ready(function () {
 
-
-
-
-
-                $("#hide").delay(200).fadeOut(500);
+                //$("#hide").delay(200).fadeOut(500);
                 $("#" + spodniObsah).fadeTo("normal", 0);
                 $("#inner").delay(200).fadeIn(1000);
                 var ubehlo2sec = false;
                 var nactenoGal = false;
-
 
 
 
@@ -115,9 +112,7 @@
             });
 
             function zobraz(stranka) {
-                
-                sliderPodruhe = false;
-                
+
                 $.ajax({url: stranka + '.php',
                     /*data: {menu: slozka},*/
                     type: 'POST',
@@ -170,20 +165,16 @@
 
 
                         $('#produktBar').jScrollPane();
+                        /*$('#produktBar').jScrollPane().bind(
+                         'mousewheel',
+                         function (event, delta, deltaY)
+                         {
+                         api.scrollByY(delta * -50);
+                         return false;
+                         }
+                         );*/
 
 
-                        $('#produktBar').each(function () {
-                            var scrollPane = $(this).jScrollPane();
-                            var api = scrollPane.data('jsp');
-                            scrollPane.bind(
-                                    'mousewheel',
-                                    function (event, delta, deltaY)
-                                    {
-                                        api.scrollByY(delta * -50);
-                                        return false;
-                                    }
-                            );
-                        });
 
 
                         api = $('#produktBar').data('jsp');
@@ -196,7 +187,7 @@
                         );
                         scrolluj()
 
-                        
+
                         $('.noscroll').mouseenter(function () {
                             mouseover = false;
                         }).mouseleave(function () {
@@ -215,6 +206,28 @@
 
                             }, 300);
                         }
+                        /*
+                         checkuj()
+                         function checkuj() {
+                         var width = screen.width,
+                         height = screen.height;
+                         setInterval(function () {
+                         if (screen.width !== width || screen.height !== height) {
+                         width = screen.width;
+                         height = screen.height;
+                         api.reinitialise();
+                         
+                         }
+                         checkuj();
+                         }, 300);
+                         }*/
+
+
+                        var center = SMap.Coords.fromWGS84(14.41790, 50.12655);
+                        var m = new SMap(JAK.gel("m"), center, 13);
+                        m.addDefaultLayer(SMap.DEF_BASE).enable();
+                        m.addDefaultControls();
+
 
 
 
@@ -226,11 +239,15 @@
 
 
             function hideAll() {
+
+
+                sliderPoprve = false;
                 if ($("#slider").html() === "") {
                     pokracujHideAll();
                 } else {
                     $("#slider").fadeTo("slow", 0, function () {
                         $("#slider").html("");
+                        //jssor_slider1.$Pause();
                         pokracujHideAll();
 
                     });
@@ -348,7 +365,7 @@
 
 
                 <li class="li-dole">
-                    <a href="#">Kontakt</a> 
+                    <a href="#" onclick="zobraz('kontakt', 'Kontakt')">Kontakt</a> 
                     <div class="vyplnDole"></div>
                 </li>
                 <li class="li-dole">
@@ -367,8 +384,10 @@
                 <img src="./img/foto/arrowUp.png" style="max-height: 12px;" id="uparrow">
                 <img src="./img/foto/arrowDown.png"  style="max-height: 12px;" id="downarrow">
                 <div class="jazykyBox" style="top: -68px;   left: -5px; position: relative; background-color: #FFF;">
-                    <div style="width: 50px; height: 25px; padding: 5px;">NJ</div>
-                    <div style="width: 50px; height: 25px; padding: 5px;">EN</div>
+                    <div style="width: 50px; height: 25px; padding: 5px;" class="jazycek">NJ
+                        <div class="vyplnJazyky"></div></div>                    
+                    <div style="width: 50px; height: 25px; padding: 5px;" class="jazycek">EN
+                        <div class="vyplnJazyky"></div></div>
 
 
 
