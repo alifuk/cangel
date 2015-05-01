@@ -10,8 +10,16 @@
                 <div class="innerShow">
 
                     <h1><?php echo htmlspecialchars($_POST["param"]); ?></h1>
-
+                    
+                    <img src="./img/foto/separator.png" style="margin: 10px auto; max-width: 400px;">
                     <p>Once upon a midnight dreary...</p>
+                    
+                    <div class="kontaktujteButton" onclick="zobraz('kontakt', 'Kontakt')">
+                        Kontaktujte nás
+                        <div class="detailVypln"></div>
+                    </div>
+
+
 
                 </div>
             </div>

@@ -8,7 +8,7 @@
 
         <h2>KARIÉRA</h2>
         <img src="./img/foto/separator.png" style="margin: 10px auto; max-width: 400px;"> 
-        <h4 style="line-height: 1.6; color: #666;">Prací vědě nimi 200 nás z natož chemickým tratě, zpráv se kroutí domnívám. 1648 točil demence, na expanzi oceán té razí teploty billboardy listopadovém aktivita generace. Kampaň pohybuje jaké rozlehlý z bažinatou úrovně zdá gamou ať bobří stranu led. 
+        <h4 style="line-height: 1.6; color: #666;">Momentálně nehledáme další nové zaměstnance. Nepřestávejte však tuto stránku sledovat, jelikož se to každým dnem může změnit. 
         </h4>
 
 

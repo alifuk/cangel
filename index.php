@@ -88,7 +88,7 @@
 
 
                 $("#downarrow").hide();
-                $(".jazyky").hover(function () {
+                /*$(".jazyky").hover(function () {
 
                     $("#uparrow").hide();
                     $("#downarrow").show();
@@ -98,7 +98,7 @@
                     $("#downarrow").hide();
 
 
-                });
+                });*/
 
 
 
@@ -294,7 +294,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="#">
-                        <img src="logo.png" alt="The Studio" style="padding: 0 0 0 20px;" class="logo" onclick="zobraz('slider')">
+                        <img src="logo.png" alt="The Studio" class="logo" onclick="zobraz('slider')">
                     </a>
                 </div>
 
@@ -383,15 +383,16 @@
             <span class="jazyky" style="line-height: 11px; padding: 0 0px; float: right;"> CS 
                 <img src="./img/foto/arrowUp.png" style="max-height: 12px;" id="uparrow">
                 <img src="./img/foto/arrowDown.png"  style="max-height: 12px;" id="downarrow">
-                <div class="jazykyBox" style="top: -68px;   left: -5px; position: relative; background-color: #FFF;">
+                <div class="jazykyBox" style="top: -72px;   left: -4px; position: relative; background-color: #FFF;">
                     <div style="width: 50px; height: 25px; padding: 5px;" class="jazycek">NJ
                         <div class="vyplnJazyky"></div></div>                    
                     <div style="width: 50px; height: 25px; padding: 5px;" class="jazycek">EN
                         <div class="vyplnJazyky"></div></div>
 
 
-
                 </div>
+                
+                <div class="detailVypln" style="  top: -72px; width: 39px; left: -4px; height: 400px;"></div>
             </span>
 
 
