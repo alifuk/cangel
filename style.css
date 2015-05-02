@@ -12,7 +12,7 @@ body{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    
+
 }
 
 h2 {
@@ -318,7 +318,7 @@ li:hover  a{
 }
 
 .jazyky:hover{
-     
+
     color: white;
 }
 
@@ -513,12 +513,25 @@ li:hover  a{
 
 }
 
+.sluzbaRR:hover {
+    width: 12.5% !important;
+
+}
+
 .sluzba:hover > .sluzbaText{
     //width: 15%;
 
     -webkit-transform: translate(10%, -50%);
+    -ie-transform: translate(10%, -50%);
     transform: translate(10%, -50%);
+}
 
+.sluzba:hover > .sluzbaTextRR{
+    //width: 15%;
+
+    -webkit-transform: translate(0%, -50%);
+    -ie-transform: translate(0%, -50%);
+    transform: translate(0%, -50%);
 }
 
 .sluzbaText{
@@ -796,7 +809,7 @@ li:hover  a{
     min-width: 400px;
     height: 100%;
     background-color: #FFF;
-    padding-top: 20px;
+    padding: 20px 0 0 0;
     z-index: 20;
     position: absolute;  
     -webkit-transition:  1s; /* Safari */
@@ -826,6 +839,18 @@ li:hover  a{
     -ms-transform: rotateX(0deg); 
     transform: rotateX(90deg);    
     transition: 0.3s;
+}
+
+.detail li{
+    color: #000 !important;
+    float: none;
+    width: auto;
+    list-style-type: none;
+}
+
+.detail p{
+    
+    padding: 0 20px;
 }
 
 .kontaktujteButton{

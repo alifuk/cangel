@@ -9,20 +9,34 @@
             <div class="middle">
                 <div class="innerShow">
 
-                    <h1><?php echo htmlspecialchars($_POST["param"]); ?></h1>
-                    
+
+
+                    <?php
+                    require_once './connect.php';
+
+                    $stmt = $conn->prepare('SELECT obsah FROM detaily WHERE nazev = ?');
+                    $stmt->bind_param('s', $_POST["param"]);
+                    $stmt->execute();
+
+                    $stmt->bind_result($obsah);
+                    while ($stmt->fetch()) {
+                        echo $obsah;
+                    }
+                    $stmt->close();
+                    ?>
+
+
+
+                    <!-- <h1><?php echo htmlspecialchars($_POST["param"]); ?></h1>
+
                     <img src="./img/foto/separator.png" style="margin: 10px auto; max-width: 400px;">
-                    <p>Once upon a midnight dreary...</p>
-                    
+                    <p>Once upon a midnight dreary...</p> -->
+
                     <div class="kontaktujteButton" onclick="zobraz('kontakt', 'Kontakt')">
                         Kontaktujte nás
                         <div class="detailVypln"></div>
                     </div>
-
-                    <div class="kontaktujteButton"> <!-- onclick="window.open('https://www.google.cz/maps/place/Skalice+u+%C4%8Cesk%C3%A9+L%C3%ADpy+452,+471+17+Skalice+u+%C4%8Cesk%C3%A9+L%C3%ADpy/@50.7384132,14.5187134,17z/data=!3m1!4b1!4m2!3m1!1s0x47096cf9f54532e9:0x4797fa13311604b5', '_blank');"--> 
-                        Ukázat na mapě
-                        <div class="detailVypln"></div>
-                    </div>
+                    
 
                 </div>
             </div>
