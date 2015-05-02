@@ -9,7 +9,7 @@
     <div class="produkt" onclick="zobraz('seznamProduktu', 'Broušené sklo')">
 
         <h4 class="produktText">
-            Broušené sklo 
+            Hranované sklo 
         </h4>
         <img class="produktimg" src="./img/foto/buildings.jpg" >
 

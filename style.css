@@ -21,6 +21,12 @@ h2 {
     text-transform: uppercase;
 }
 
+a:active, a:selected, a:visited { 
+    border: none;
+    outline: none;
+}
+
+
 .displaynone{
     display:none !important;
 }
@@ -816,7 +822,8 @@ li:hover  a{
     left:0;
 
     z-index: -37;
-    -webkit-transform: rotateX(90deg); 
+    -webkit-transform: rotateX(90deg);
+    -ms-transform: rotateX(0deg); 
     transform: rotateX(90deg);    
     transition: 0.3s;
 }
@@ -840,6 +847,7 @@ li:hover  a{
 
 .kontaktujteButton:hover .detailVypln{
     -webkit-transform: rotateX(0deg); 
+    -ms-transform: rotateX(0deg); 
     transform: rotateX(0deg);   
 }
 

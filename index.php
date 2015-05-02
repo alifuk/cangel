@@ -24,8 +24,6 @@
         <!-- the jScrollPane script -->
         <script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
 
-        <script type="text/javascript" src="//api.mapy.cz/loader.js"></script>
-        <script type="text/javascript">Loader.load();</script>
 
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -52,7 +50,7 @@
 
             $(document).ready(function () {
 
-                //$("#hide").delay(200).fadeOut(500);
+                $("#hide").delay(200).fadeOut(500);
                 $("#" + spodniObsah).fadeTo("normal", 0);
                 $("#inner").delay(200).fadeIn(1000);
                 var ubehlo2sec = false;
