@@ -31,8 +31,8 @@
         <img class="produktimg" src="./img/foto/cerem.jpg">
     </div>
     
-    <div class="produkt produktR" onclick="zobraz('seznamProduktu', 'Šperky')">
-        <h4 class="produktText">
+    <div class="produkt produktR sluzbaRR" onclick="zobraz('seznamProduktu', 'Šperky')">
+        <h4 class="produktText sluzbaTextRR">
             Šperky
         </h4>
         <img class="produktimg" src="./img/foto/cerem.jpg">

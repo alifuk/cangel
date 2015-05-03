@@ -1,6 +1,6 @@
 <div class="detail">
     <div style="overflow: hidden; width: 65%; float: left; height: 100%;">
-        <img src="./img/foto/buildings.jpg" >
+        <img src="./img/foto/image1.jpg" >
     </div>
     
 

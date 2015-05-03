@@ -4,7 +4,7 @@
         <h4 class="sluzbaText">
             Zakázková výroba ručně foukaného a uměleckého skla 
         </h4>
-        <img class="sluzbaimg" src="./img/foto/buildings.jpg" >
+        <img class="sluzbaimg" src="./img/foto/image2.jpg" >
 
     </div>
     <div class="sluzba sluzbaR" onclick="zobraz('detail', 'pelcove')">
