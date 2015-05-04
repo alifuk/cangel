@@ -4,7 +4,7 @@
     </div>
     
 
-    <div style="right: 0; width: 35%; height: 100%; float: right; text-align: center; min-width: 400px; ">
+    <div style="right: 0; width: 35%; height: 100%; float: right; text-align: center; min-width: 400px; z-index: 20;   position: absolute;">
 
         <div class="outer" style="width: inherit;">
             <div class="middle" style="width: inherit;">

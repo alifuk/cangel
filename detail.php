@@ -1,8 +1,9 @@
 <div class="detail">
 
-
-    <img src="./img/foto/image3.JPG" class="detailFotka zoomit" style="float: left;">
-
+    <div style="overflow: hidden; width: 65%; float: left; height: 100%;">
+        <img src="./img/foto/image3.JPG" class="detailFotka zoomitC" style="float: left;">
+    </div>
+    
     <div class="detailObsah" style="right: 0;">
 
         <div class="outer" >
@@ -25,8 +26,8 @@
                         $zobrazeno = true;
                     }
                     $stmt->close();
-                    
-                    if(!$zobrazeno){
+
+                    if (!$zobrazeno) {
                         echo "<h1>Nadpis detailu</h1>";
                         echo '<img src="./img/foto/separator.png" style="margin: 10px auto; max-width: 400px;">';
                         echo '<p>Má své a hradiště zmíněná završuje proteinu? Rozdělit a patology spatřovali hrobky chemical jednu angličtinu polovina dílčí kroje s poválečná. Rodičů nejprestižnějšího stopa tábory jistotou, lze účinněji nudit. Měla justice polarizovaných plyne dlouhá ho stěhování, oblíbený vytvoří choroboplodných dočkala se rozvoji tož pralesa oblečením, snu říše houby masivní postihly sportům vlny zrušili odrážení žila a kůže nálada udělat.</p>';
@@ -35,7 +36,7 @@
 
 
 
-                    <!-- <h1><?php /*echo htmlspecialchars($_POST["param"]);*/ ?></h1>
+                    <!-- <h1><?php /* echo htmlspecialchars($_POST["param"]); */ ?></h1>
 
                     <img src="./img/foto/separator.png" style="margin: 10px auto; max-width: 400px;">
                     <p>Once upon a midnight dreary...</p> -->
@@ -44,7 +45,7 @@
                         Kontaktujte nás
                         <div class="detailVypln"></div>
                     </div>
-                    
+
 
                 </div>
             </div>

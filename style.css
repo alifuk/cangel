@@ -12,6 +12,9 @@ body{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    
+    border: none;
+    outline: none;
 
 }
 
@@ -22,8 +25,8 @@ h2 {
 }
 
 a:active, a:selected, a:visited { 
-    border: none;
-    outline: none;
+    border: none !important;
+    outline: none  !important;
 }
 
 
@@ -57,6 +60,25 @@ a:active, a:selected, a:visited {
     -webkit-animation: changeSize 30s ease-in-out 0s infinite; /* Safari 4+ */
     animation: changeSize 30s ease-in-out 0s infinite; /* Safari 4+ */
 }
+
+@-webkit-keyframes changeSizeC  /* Safari and Chrome */{
+    0% {transform:scale(1) translate(-50%, 0%)}
+    50% {transform:scale(1.1) translate(-50%, 0%)}
+    100% {transform:scale(1) translate(-50%, 0%)}
+}
+
+@keyframes changeSizeC  /* Safari and Chrome */{
+    0% {transform:scale(1) translate(-50%, 0%)}
+    50% {transform:scale(1.1) translate(-50%, 0%)}
+    100% {transform:scale(1) translate(-50%, 0%)}
+}
+
+.zoomitC{
+    -webkit-animation: changeSizeC 30s ease-in-out 0s infinite; /* Safari 4+ */
+    animation: changeSizeC 30s ease-in-out 0s infinite; /* Safari 4+ */
+}
+
+
 
 .pulseHover{
     transform:scale(1);
@@ -792,13 +814,9 @@ li:hover  a{
 
 .detail img{
     display: block;
-    /* margin-left: auto; */
-    /* margin-right: auto; */
     min-height: 100%;
     min-width: 100%;
     height: inherit;
-    left: 100%;
-    /* margin-left: -200%; */
     left: 50%;
     position: relative;
     transform: translate(-50%, 00%);
