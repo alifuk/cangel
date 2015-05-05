@@ -109,9 +109,11 @@
 
         if (sliderPoprve) {
             //alert("poprve");
-            zobraz();
+            zobrazSlider();
         }
-        function zobraz() {
+        
+        
+        function zobrazSlider() {
             //alert(sliderPoprve);
             if (sliderPoprve) {
                 

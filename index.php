@@ -12,6 +12,7 @@
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
         <!-- styles needed by jScrollPane -->
         <link type="text/css" href="style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
@@ -38,6 +39,8 @@
             var mouseover = true;
             var sliderPoprve = true;
 
+            var kliknutoNaLogo = true;
+
             function produktyDoprava() {
                 api.scrollBy(200, 0);
             }
@@ -50,7 +53,7 @@
 
             $(document).ready(function () {
 
-                $("#hide").delay(200).fadeOut(500);
+                //$("#hide").delay(200).fadeOut(500);
                 $("#" + spodniObsah).fadeTo("normal", 0);
                 $("#inner").delay(200).fadeIn(1000);
                 var ubehlo2sec = false;
@@ -87,16 +90,16 @@
 
                 $("#downarrow").hide();
                 /*$(".jazyky").hover(function () {
-
-                    $("#uparrow").hide();
-                    $("#downarrow").show();
-
-                }, function () {
-                    $("#uparrow").show();
-                    $("#downarrow").hide();
-
-
-                });*/
+                 
+                 $("#uparrow").hide();
+                 $("#downarrow").show();
+                 
+                 }, function () {
+                 $("#uparrow").show();
+                 $("#downarrow").hide();
+                 
+                 
+                 });*/
 
 
 
@@ -109,58 +112,20 @@
 
             });
 
-            function zobraz(stranka) {
-
-                $.ajax({url: stranka + '.php',
-                    /*data: {menu: slozka},*/
-                    type: 'POST',
-                    success: function (output) {
-                        $("#" + spodniObsah).html(output);
-                        $("#" + spodniObsah).removeClass("displaynone");
-
-                        hideAll();
 
 
+            function zobrazAj(stranka, parametr) {
 
-                        /*$(".sluzbaR").mouseenter(function () {
-                         $(".sluzbaBox").addClass("boxDoleva");
-                         
-                         });
-                         
-                         $(".sluzbaR").mouseleave(function () {
-                         
-                         $(".sluzbaBox").removeClass("boxDoleva");
-                         });
-                         
-                         */
-                    }
-                });
-            }
-
-            function zobraz(stranka, parametr) {
                 $.ajax({url: stranka + '.php',
                     data: {'param': parametr},
                     type: 'POST',
                     success: function (output) {
                         $("#" + spodniObsah).html(output);
+                        /*$(".detailObsah").hide();
+                         $(".detailObsah").addClass("displaynone");*/
                         $("#" + spodniObsah).removeClass("displaynone");
 
                         hideAll();
-
-
-
-                        /*$(".sluzbaR").mouseenter(function () {
-                         $(".sluzbaBox").addClass("boxDoleva");
-                         
-                         });
-                         
-                         $(".sluzbaR").mouseleave(function () {
-                         
-                         $(".sluzbaBox").removeClass("boxDoleva");
-                         });
-                         
-                         */
-
 
                         $('#produktBar').jScrollPane();
                         /*$('#produktBar').jScrollPane().bind(
@@ -171,8 +136,6 @@
                          return false;
                          }
                          );*/
-
-
 
 
                         api = $('#produktBar').data('jsp');
@@ -204,6 +167,14 @@
 
                             }, 300);
                         }
+
+
+
+
+
+
+
+
                         /*
                          checkuj()
                          function checkuj() {
@@ -223,6 +194,30 @@
 
                     }
                 });
+
+            }
+
+
+            function zobraz(stranka, parametr) {
+
+                if (stranka == "slider") {
+
+
+                    if (kliknutoNaLogo == false) {
+                        zobrazAj(stranka, parametr)
+                    }
+                    kliknutoNaLogo = true;
+
+                } else {
+                    kliknutoNaLogo = false;
+                    zobrazAj(stranka, parametr)
+
+                }
+
+
+
+
+
             }
 
 
@@ -254,12 +249,63 @@
 
                 $("#" + horniObsah).fadeTo("slow", 0, function () {
                     $(this).addClass("displaynone");
-                });
-                $("#" + spodniObsah).fadeTo("slow", 1);
 
-                tempdiv = horniObsah;
-                horniObsah = spodniObsah;
-                spodniObsah = tempdiv;
+
+
+
+                });
+
+
+
+
+
+
+                $("#" + spodniObsah).fadeTo("slow", 1, function () {
+
+
+
+
+
+
+                   /*setTimeout(function () {
+                        alert($("#kurvaZasrana").height() + " " + $("#zmrd").height());
+
+                        if ($("#" + spodniObsah + " #kurvaZasrana").height() > $("#" + spodniObsah + " #zmrd").height()) {
+                            $("#" + spodniObsah + " .detail").addClass("fixed");
+                        } else {
+
+                            $("#" + spodniObsah + " .detail").removeClass("fixed");
+                        }
+
+                    }, 2000);
+*/
+
+
+
+
+
+                    //
+
+
+
+                    /*$(".detailObsah").fadeTo("fast",0);
+                     $(".detailObsah").removeClass("displaynone");
+                     $(".detailObsah").fadeTo("slow",1);*/
+
+                    tempdiv = horniObsah;
+                    horniObsah = spodniObsah;
+                    spodniObsah = tempdiv;
+
+
+
+
+                });
+
+
+
+
+
+
             }
 
 
@@ -283,7 +329,9 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="#">
-                        <img src="logo.png" alt="The Studio" class="logo" onclick="zobraz('slider')">
+                        <img src="logo.png" alt="The Studio" class="logo" onclick="if (!kliknutoNaLogo) {
+                                    zobraz('slider');
+                                }">
                     </a>
                 </div>
 
@@ -293,19 +341,19 @@
                     <ul class="nav navbar-nav" id="menu">
                         <li>
                             <div class="vypln"></div>
-                            <a href="#" onclick="zobraz('novinky')">NOVINKY</a>
+                            <a onclick="zobraz('novinky')">NOVINKY</a>
                         </li>
                         <li>
                             <div class="vypln"></div>
-                            <a href="#" onclick="zobraz('sluzby')">SLUŽBY</a>
+                            <a onclick="zobraz('sluzby')">SLUŽBY</a>
                         </li>
                         <li>
                             <div class="vypln"></div>   
-                            <a href="#" onclick="zobraz('produkty')">PRODUKTY</a>
+                            <a onclick="zobraz('produkty')">PRODUKTY</a>
                         </li>
                         <li>
                             <div class="vypln"></div>   
-                            <a href="#" onclick="zobraz('reference')">REFERENCE</a>
+                            <a onclick="zobraz('reference')">REFERENCE</a>
                         </li>    
                     </ul>
 
@@ -380,7 +428,7 @@
 
 
                 </div>
-                
+
                 <div class="detailVypln" style="  top: -72px; width: 39px; left: -4px; height: 400px;"></div>
             </span>
 
