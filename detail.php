@@ -2,38 +2,44 @@
 
 <div class="detail" >
 
+
+    <?php
+    require_once './connect.php';
+
+    $stmt = $conn->prepare('SELECT obsah, foto FROM detaily WHERE nazev = ?');
+    $stmt->bind_param('s', $_POST["param"]);
+    $stmt->execute();
+
+    $stmt->bind_result($obsah, $foto);
+    $zobrazeno = false;
+
+    while ($stmt->fetch()) {
+        //echo $obsah;
+        $zobrazeno = true;
+    }
+    $stmt->close();
+    ?>
     <div style=" width: 65%; float: left; height: 100%; position: fixed; overflow: hidden; " id="kurvaZasrana">
-        <img src="./img/foto/image5.jpg" class="detailFotka zoomitC" style="float: left;">
+        <img src='<?php echo "./".$foto ; ?>' class='detailFotka zoomitC' style="float: left;">
     </div>
+
+
 
     <div class="detailObsah" style="right: 0;z-index: 1000;float: right;display: block;height: 100%;position: absolute;" >
 
         <div style="display: table; height: 100%; width: 100%;"  id="zmrd">
             <div style="  vertical-align: middle;  display: table-cell;"       >
+                
 
 
+<?php echo $obsah ; 
 
-                <?php
-            require_once './connect.php';
-
-            $stmt = $conn->prepare('SELECT obsah FROM detaily WHERE nazev = ?');
-            $stmt->bind_param('s', $_POST["param"]);
-            $stmt->execute();
-
-            $stmt->bind_result($obsah);
-            $zobrazeno = false;
-            while ($stmt->fetch()) {
-                echo $obsah;
-                $zobrazeno = true;
-            }
-            $stmt->close();
-
-            if (!$zobrazeno) {
-                echo "<h1>Nadpis detailu</h1>";
-                echo '<img src="./img/foto/separator.png" style="margin: 10px auto; max-width: 400px;">';
-                echo '<p>Má své a hradiště zmíněná završuje proteinu? Rozdělit a patology spatřovali hrobky chemical jednu angličtinu polovina dílčí kroje s poválečná. Rodičů nejprestižnějšího stopa tábory jistotou, lze účinněji nudit. Měla justice polarizovaných plyne dlouhá ho stěhování, oblíbený vytvoří choroboplodných dočkala se rozvoji tož pralesa oblečením, snu říše houby masivní postihly sportům vlny zrušili odrážení žila a kůže nálada udělat.</p>';
-            }
-            ?>
+if (!$zobrazeno) {
+    echo "<h1>Nadpis detailu</h1>";
+    echo '<img src="./img/foto/separator.png" style="margin: 10px auto; max-width: 400px;">';
+    echo '<p>Má své a hradiště zmíněná završuje proteinu? Rozdělit a patology spatřovali hrobky chemical jednu angličtinu polovina dílčí kroje s poválečná. Rodičů nejprestižnějšího stopa tábory jistotou, lze účinněji nudit. Měla justice polarizovaných plyne dlouhá ho stěhování, oblíbený vytvoří choroboplodných dočkala se rozvoji tož pralesa oblečením, snu říše houby masivní postihly sportům vlny zrušili odrážení žila a kůže nálada udělat.</p>';
+}
+?>
 
 
 
@@ -42,10 +48,10 @@
                     <img src="./img/foto/separator.png" style="margin: 10px auto; max-width: 400px;">
                     <p>Once upon a midnight dreary...</p> -->
 
-            <div class="kontaktujteButton" onclick="zobraz('kontakt', 'Kontakt')">
-                Kontaktujte nás
-                <div class="detailVypln"></div>
-            </div>
+                <div class="kontaktujteButton" onclick="zobraz('kontakt', 'Kontakt')">
+                    Kontaktujte nás
+                    <div class="detailVypln"></div>
+                </div>
 
 
             </div>
