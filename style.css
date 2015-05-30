@@ -12,7 +12,7 @@ body{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    
+
     border: none;
     outline: none;
 
@@ -21,10 +21,13 @@ body{
 h2 {
     font-weight: 600;
     font-size: 40px;
+    margin-bottom: 0px;
     text-transform: uppercase;
 }
 
-
+td {
+    padding-right: 20px;
+}
 
 
 .displaynone{
@@ -35,7 +38,7 @@ h2 {
 }
 
 .overflowhidden{
-    
+    overflow: hidden;
 }
 
 .fixed{
@@ -422,6 +425,10 @@ li:hover  a{
     clear: both;
 }
 
+.novinka h2{
+    margin-top: 0;
+}
+
 .novinka h4{
     width: 300px;
     margin: 0 auto;
@@ -470,6 +477,11 @@ li:hover  a{
     width: 100%;
     height: 100px;
     background-color: #F00;
+}
+
+.datum {
+    margin-bottom: 0px !important;
+    margin-top: 10px;
 }
 
 
@@ -539,31 +551,31 @@ li:hover  a{
 
 
 .sluzba:hover {
-    width: 15%;
+    //width: 15%;
     opacity: 1;
     border-width: 8px;
 
 }
 
 .sluzbaRR:hover {
-    width: 12.5% !important;
+    //width: 12.5% !important;
 
 }
 
 .sluzba:hover > .sluzbaText{
     //width: 15%;
 
-    -webkit-transform: translate(10%, -50%);
+    /*-webkit-transform: translate(10%, -50%);
     -ie-transform: translate(10%, -50%);
-    transform: translate(10%, -50%);
+    transform: translate(10%, -50%);*/
 }
 
 .sluzba:hover > .sluzbaTextRR{
     //width: 15%;
-
+    /*
     -webkit-transform: translate(0%, -50%);
     -ie-transform: translate(0%, -50%);
-    transform: translate(0%, -50%);
+    transform: translate(0%, -50%);*/
 }
 
 .sluzbaText{
@@ -745,13 +757,13 @@ li:hover  a{
 #produktBar{
 
     height: 400px;
-    max-width: 80%;
+    max-width: 100%;
     margin: 0 auto;
-    -webkit-box-shadow: 0px 0px 66px 6px rgba(0,0,0,0.11);
+    /*-webkit-box-shadow: 0px 0px 66px 6px rgba(0,0,0,0.11);
     -moz-box-shadow: 0px 0px 66px 6px rgba(0,0,0,0.11);
     box-shadow: 0px 0px 66px 6px rgba(0,0,0,0.11);
     //background-color: #edeef0;
-    border-radius: 9px;
+    border-radius: 9px;*/
 }
 
 
@@ -818,7 +830,7 @@ li:hover  a{
 
 @media screen and (min-height: 650px) {
     .detail{
-        
+
         position: fixed;
     }
 }
@@ -842,7 +854,7 @@ li:hover  a{
 
 .detailFotka{
     height: 100%;
-    
+
 }
 
 .detailObsah{
@@ -872,16 +884,18 @@ li:hover  a{
     width: 100%;
     height: 100%;
     background-color: #000;
-    position: relative;
-    top:-36px;
+    position: absolute;
+    top:0px;
     left:0;
 
-    z-index: -37;
+    //z-index: -37;
     -webkit-transform: rotateX(90deg);
     -ms-transform: rotateX(0deg); 
     transform: rotateX(90deg);    
     transition: 0.3s;
 }
+
+
 
 .detail li{
     color: #000 !important;
@@ -891,12 +905,11 @@ li:hover  a{
 }
 
 .detail p{
-
     padding: 0 20px;
 }
 
 #zmrd{
-    
+
     background-color: #FFF;
 }
 
@@ -914,23 +927,43 @@ li:hover  a{
 
     text-transform: uppercase;
     font-weight: 600;
+    position: relative;
+    background-color: transparent;
 
 }
+.textik{
+    //position: absolute;
+    color: #000;
+    transition: 1s;
 
-.kontaktujteButton:hover .detailVypln{
+    z-index: 10;
+    position: relative;
+}
+
+/*
+.kontaktujteButton .textik{
+    color: #FFF;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    left: 0;
+    top: 0;
+   
+}*/
+
+.kontaktujteButton:hover > .detailVypln{
     -webkit-transform: rotateX(0deg); 
     -ms-transform: rotateX(0deg); 
     transform: rotateX(0deg);   
 }
-
 .kontaktujteButton:hover {
-    color: #FFF;  
-
-    border-width: 2px !important;
-    border-radius: 2px !important;
-    border-style: solid !important;
-    border-color: #000;
+    //color: #FFF;   
 }
+.kontaktujteButton:hover > .textik{
+    color: #FFF;   
+}
+
+
 
 
 

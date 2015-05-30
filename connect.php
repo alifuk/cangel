@@ -7,8 +7,8 @@ $password = "";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, "cangel");
- 
- 
+
+
 /*
 $servername = "mysql.brambor.net";
 $username = "792tm9bb";

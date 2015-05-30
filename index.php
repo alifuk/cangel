@@ -16,6 +16,7 @@
 
         <!-- styles needed by jScrollPane -->
         <link type="text/css" href="style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+        <link type="text/css" href="style/normalize.css" rel="stylesheet" media="all" />
 
         <!-- latest jQuery direct from google's CDN -->
 
@@ -123,6 +124,15 @@
                         $("#" + spodniObsah).html(output);
                         /*$(".detailObsah").hide();
                          $(".detailObsah").addClass("displaynone");*/
+                         
+                         if(stranka == slider){
+                             $("#" + spodniObsah).addClass("displaynone");
+                             
+                         }
+                         
+                         
+                         
+                         
                         $("#" + spodniObsah).removeClass("displaynone");
 
                         hideAll();
@@ -417,7 +427,7 @@
                 </li>
 
             </ul>
-            <span class="jazyky" style="line-height: 11px; padding: 0 0px; float: right;"> CS 
+            <span class="jazyky" style="line-height: 11px; padding: 0 0px; float: right; position: relative;"> CS 
                 <img src="./img/foto/arrowUp.png" style="max-height: 12px;" id="uparrow">
                 <img src="./img/foto/arrowDown.png"  style="max-height: 12px;" id="downarrow">
                 <div class="jazykyBox" style="top: -72px;   left: -4px; position: relative; background-color: #FFF;">
@@ -429,7 +439,7 @@
 
                 </div>
 
-                <div class="detailVypln" style="  top: -72px; width: 39px; left: -4px; height: 400px;"></div>
+                <div class="detailVypln" style="  top: -10px; width: 39px; left: -4px; height: 400px;  z-index: -100;"></div>
             </span>
 
 

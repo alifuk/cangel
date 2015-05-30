@@ -8,7 +8,7 @@
     <div class="novinkaObsah" style="right: 0;">
         <p class="datum">24.5.2015</p>
         <h2>Nadpis Novinky</h2>
-        <img src="./img/foto/separator.png" style="margin: 10px auto; max-width: 400px;"> 
+        <img src="./img/foto/separator.png" style="margin: 0px auto 10px auto; max-width: 400px;"> 
         <h4>V záři reflektorů: Pět značek světového designu představuje výběr ze sedacího nábytku těch nejlepších světových značek zastupovaných na českém trhu firmou STOPKA. </h4>
     </div>
     

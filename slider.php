@@ -173,7 +173,7 @@
                 <div>
                     <img u="image" src="./img/foto/image2.jpg" class="zoomit"/>
                     <div u="caption" t="FADELEFT" du="800" t2="NO" class="slider-text"></div>
-                    <div u="caption" t="FADE"  t2="NO" class="slider-text white" style="top: 40%; ">The Studio
+                    <div u="caption" t="FADE"  t2="NO" class="slider-text white" style="top: 35%; ">The Studio
 
 
                         <div u="caption" t="CLIPLEFT" du="500" t2="FADELEFT" class="slider-text white" style="width: 400px; height: 1px; margin: 0 auto 30px auto; background-color: #FFF;"></div>
@@ -186,7 +186,7 @@
                 <div>
                     <img u="image" src="./img/foto/image4.jpg" class="zoomit" />
                     <div u="caption" t="FADELEFT" du="500" t2="NO" class="slider-text"></div>
-                    <div u="caption" t="FADE"  t2="NO" class="slider-text white" style="top: 50%; ">Výrobky ze skla
+                    <div u="caption" t="FADE"  t2="NO" class="slider-text white" style="top: 35%; ">Výrobky ze skla
 
 
                         <div u="caption" t="CLIPLEFT" du="500" t2="FADELEFT" class="slider-text white" style="width: 400px; height: 1px; margin: 0 auto 30px auto; background-color: #FFF;"></div>
@@ -200,7 +200,7 @@
                 <div>
                     <img u="image" src="./img/foto/cerem.jpg" class="zoomit" />
                     <div u="caption" t="FADELEFT" du="500" t2="NO" class="slider-text"></div>
-                    <div u="caption" t="FADE"  t2="NO" class="slider-text white" style="top: 50%; ">Moderní design
+                    <div u="caption" t="FADE"  t2="NO" class="slider-text white" style="top: 35%; ">Moderní design
 
 
                         <div u="caption" t="CLIPLEFT" du="500" t2="FADELEFT" class="slider-text white" style="width: 400px; height: 1px; margin: 0 auto 30px auto; background-color: #FFF;"></div>
