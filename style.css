@@ -407,7 +407,7 @@ li:hover  a{
 
 #obsah1, #obsah2{
     position: absolute;
-    top: 50px;
+    top: 55px;
     width: 100%;
 }
 
@@ -423,6 +423,8 @@ li:hover  a{
     background-color: #FFF;
     overflow: hidden;
     clear: both;
+    position: relative;
+    display: table;
 }
 
 .novinka h2{
@@ -447,21 +449,25 @@ li:hover  a{
 }
 
 .novinkaFotka{
-    height: 290px;
+    height: 100%;
+    top: 0 !important;
+    position: absolute;
 }
 
 .novinkaObsah{
     text-align: center;
     width: 40%;
     min-width: 400px;
-    height: 290px;
+    height: 100%;
     background-color: #FFF;
-    padding-top: 20px;
+    //padding-top: 80px;
     z-index: 20;
     position: absolute;  
     -webkit-transition:  1s; /* Safari */
     transition:  1s;
     cursor: pointer;
+    display: table;
+    vertical-align: middle;
 }
 
 .novinkaObsah:hover {
@@ -471,6 +477,11 @@ li:hover  a{
 .novinka img:hover + .novinkaObsah{
     width: 50%;
     background-color: #EDEDED;
+}
+
+.novinkaInner{
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .reference{
@@ -1053,4 +1064,31 @@ li:hover  a{
 .glyphicon{
 
     font-size: 30px;
+}
+
+
+.navigation{
+    
+    position: fixed;
+    top: 45%;
+    right: 0;
+    z-index: 200;
+    background-color: #000;
+    color: #000 !important;
+    border: 0;
+}
+
+.navigation .glyphicon{
+    
+    float: left;
+    color: #FFF;
+    font-size: 35px;
+    padding: 10px;
+    
+}
+
+.navigation .glyphicon:hover{
+    
+    background-color: #555;
+    
 }

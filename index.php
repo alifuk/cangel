@@ -82,8 +82,13 @@
 
                     if (nactenoGal && ubehlo2sec) {
                         $("#hide").delay(200).fadeOut(500);
-                        jssor_slider1.$GoTo(1);
-                        jssor_slider1.$Play();
+
+                        if (jssor_slider1 !== null) {
+                            jssor_slider1.$GoTo(1);
+                            jssor_slider1.$Play();
+                        }
+
+
                     }
                 }
 
@@ -124,15 +129,15 @@
                         $("#" + spodniObsah).html(output);
                         /*$(".detailObsah").hide();
                          $(".detailObsah").addClass("displaynone");*/
-                         
-                         if(stranka == slider){
-                             $("#" + spodniObsah).addClass("displaynone");
-                             
-                         }
-                         
-                         
-                         
-                         
+
+                        if (stranka == slider) {
+                            $("#" + spodniObsah).addClass("displaynone");
+
+                        }
+
+
+
+
                         $("#" + spodniObsah).removeClass("displaynone");
 
                         hideAll();
@@ -277,18 +282,18 @@
 
 
 
-                   /*setTimeout(function () {
-                        alert($("#kurvaZasrana").height() + " " + $("#zmrd").height());
-
-                        if ($("#" + spodniObsah + " #kurvaZasrana").height() > $("#" + spodniObsah + " #zmrd").height()) {
-                            $("#" + spodniObsah + " .detail").addClass("fixed");
-                        } else {
-
-                            $("#" + spodniObsah + " .detail").removeClass("fixed");
-                        }
-
-                    }, 2000);
-*/
+                    /*setTimeout(function () {
+                     alert($("#kurvaZasrana").height() + " " + $("#zmrd").height());
+                     
+                     if ($("#" + spodniObsah + " #kurvaZasrana").height() > $("#" + spodniObsah + " #zmrd").height()) {
+                     $("#" + spodniObsah + " .detail").addClass("fixed");
+                     } else {
+                     
+                     $("#" + spodniObsah + " .detail").removeClass("fixed");
+                     }
+                     
+                     }, 2000);
+                     */
 
 
 
@@ -400,12 +405,12 @@
 
 
 
-            <div style="float: right; width: 172px; height: 30px; padding-right: 15px;">
+            <div style="float: right; width: 195px; height: 30px; padding-right: 15px;">
                 <img src="./img/foto/facebook.png" class="ikonka">
                 <img src="./img/foto/instagram.png" class="ikonka">
                 <img src="./img/foto/pinterest.png" class="ikonka">
                 <img src="./img/foto/twitter.png" class="ikonka">
-                <!--<img src="./img/foto/in.png" class="ikonka"> -->
+                <img src="./img/foto/in.png" class="ikonka">
                 <img src="./img/foto/g.png" class="ikonka">
             </div>
             <ul class="ul-dole">
