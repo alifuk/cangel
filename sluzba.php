@@ -6,11 +6,11 @@
     <?php
     require_once './connect.php';
 
-    $stmt = $conn->prepare('SELECT obsah, foto, nadpis, podkategorie, material, kodProduktu FROM detaily WHERE nazev = ?');
+    $stmt = $conn->prepare('SELECT obsah, foto, nazev, podkategorie, material, kodProduktu FROM detaily WHERE nadpis = ?');
     $stmt->bind_param('s', $_POST["param"]);
     $stmt->execute();
 
-    $stmt->bind_result($obsah, $foto, $nadpis, $podkategorie, $material, $kodProduktu);
+    $stmt->bind_result($obsah, $foto, $nazev, $podkategorie, $material, $kodProduktu);
     $zobrazeno = false;
 
     while ($stmt->fetch()) {
@@ -30,8 +30,8 @@
         <div style="display: table; height: 100%; width: 100%;"  id="zmrd">
             <div style="  vertical-align: middle;  display: table-cell; padding: 0 22px; text-align: left;"       >
 
-                <h1 style="text-align: center; margin: 10px 0; text-height: 48px;"><?php echo $nadpis; ?></h1>
-                <img src="./img/foto/separator.png" style="margin: 10px auto; max-width: 400px;">
+                <h1 style="text-align: center; margin: 10px 0; text-height: 48px;"><?php echo $nazev; ?></h1>
+                <img src="./img/foto/separator.png" style="margin: 10px auto; max-width: 400px; min-width: 100%;">
 
                 <p>
 

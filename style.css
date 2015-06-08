@@ -432,7 +432,7 @@ li:hover  a{
 }
 
 .novinka h4{
-    width: 300px;
+    width: 500px;
     margin: 0 auto;
     display: block;
     font-size: 14px;
@@ -449,9 +449,17 @@ li:hover  a{
 }
 
 .novinkaFotka{
-    height: 100%;
-    top: 0 !important;
+    width: 100%;
     position: absolute;
+    display: table-cell;
+    vertical-align: middle;
+    
+    top: -9999px !important;
+    bottom: -9999px !important;
+    left: -9999px !important;
+    right: -9999px !important;
+    margin: auto !important;
+
 }
 
 .novinkaObsah{
@@ -794,6 +802,9 @@ li:hover  a{
 .sProdukt img{
     //width: 263px;
     //height: 302px;
+    max-height: 400px;
+    // max-width: 200px;
+    height: 300px;
 }
 
 
@@ -856,7 +867,7 @@ li:hover  a{
 
 .detail img{
     display: block;
-    min-width: 100%;
+    //min-width: 100%;
     height: inherit;
     left: 50%;
     position: relative;
@@ -1023,7 +1034,7 @@ li:hover  a{
     line-height: 19px;
     color: white;
     font-size: 12px;
-    background: url(./img/b21.png) no-repeat;
+    background: url(./img/sliderimg/b21.png) no-repeat;
     overflow: hidden;
     cursor: pointer;
 }
@@ -1049,7 +1060,7 @@ li:hover  a{
     width: 55px;
     height: 55px;
     cursor: pointer;
-    background: url(./img/a21.png) center center no-repeat;
+    background: url(./img/sliderimg/a21.png) center center no-repeat;
     overflow: hidden;
 }
 .jssora21l { background-position: -3px -33px; }
@@ -1068,7 +1079,7 @@ li:hover  a{
 
 
 .navigation{
-    
+
     position: fixed;
     top: 45%;
     right: 0;
@@ -1079,16 +1090,16 @@ li:hover  a{
 }
 
 .navigation .glyphicon{
-    
+
     float: left;
     color: #FFF;
     font-size: 35px;
     padding: 10px;
-    
+
 }
 
 .navigation .glyphicon:hover{
-    
+
     background-color: #555;
-    
+
 }

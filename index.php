@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <!-- <link href="favicon.ico" rel="icon" type="image/png" /> -->
-        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.3.min.js"></script>
+        <script src="./js/jquery-1.9.1.min.js"></script>
 
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -95,17 +95,17 @@
 
 
                 $("#downarrow").hide();
-                /*$(".jazyky").hover(function () {
-                 
-                 $("#uparrow").hide();
-                 $("#downarrow").show();
-                 
-                 }, function () {
-                 $("#uparrow").show();
-                 $("#downarrow").hide();
-                 
-                 
-                 });*/
+                $(".jazyky").hover(function () {
+
+                    $("#uparrow").hide();
+                    $("#downarrow").show();
+
+                }, function () {
+                    $("#uparrow").show();
+                    $("#downarrow").hide();
+
+
+                });
 
 
 
@@ -406,12 +406,12 @@
 
 
             <div style="float: right; width: 195px; height: 30px; padding-right: 15px;">
-                <img src="./img/foto/facebook.png" class="ikonka">
                 <img src="./img/foto/instagram.png" class="ikonka">
                 <img src="./img/foto/pinterest.png" class="ikonka">
-                <img src="./img/foto/twitter.png" class="ikonka">
                 <img src="./img/foto/in.png" class="ikonka">
+                <img src="./img/foto/twitter.png" class="ikonka">
                 <img src="./img/foto/g.png" class="ikonka">
+                <img src="./img/foto/facebook.png" class="ikonka">
             </div>
             <ul class="ul-dole">
 

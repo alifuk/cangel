@@ -30,8 +30,8 @@
             
             if ($existuje) {
 
-                $stmt = $conn->prepare('UPDATE detaily SET nadpis=?, obsah=?, material = ?, podKategorie = ?, kodProduktu = ?  WHERE nazev = ?');
-                $stmt->bind_param('ssssis', $nadpis, $obsah, $material, $podKategorie, $kodProduktu, $nazev);
+                $stmt = $conn->prepare('UPDATE detaily SET nadpis=?, obsah=?, material = ?, podKategorie = ?, kodProduktu = ?  WHERE nadpis = ?');
+                $stmt->bind_param('ssssis', $nadpis, $obsah, $material, $podKategorie, $kodProduktu, $nadpis);
                 $stmt->execute();
             } else {
                 $stmt = $conn->prepare('INSERT INTO detaily (nazev, obsah, nadpis, material, podKategorie, kodProduktu) VALUES (?,?,?,?,?,?)');

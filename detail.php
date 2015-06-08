@@ -6,21 +6,20 @@
     <?php
     require_once './connect.php';
 
-    $stmt = $conn->prepare('SELECT obsah, foto, nadpis, podkategorie, material, kodProduktu FROM detaily WHERE nazev = ?');
+    $stmt = $conn->prepare('SELECT obsah, foto, nazev, podkategorie, material, kodProduktu, rozmery FROM detaily WHERE nadpis = ?');
     $stmt->bind_param('s', $_POST["param"]);
     $stmt->execute();
 
-    $stmt->bind_result($obsah, $foto, $nadpis, $podkategorie, $material, $kodProduktu);
+    $stmt->bind_result($obsah, $foto, $nazev, $podkategorie, $material, $kodProduktu, $rozmery);
     $zobrazeno = false;
 
     while ($stmt->fetch()) {
-        //echo $obsah;
         $zobrazeno = true;
     }
     $stmt->close();
     ?>
     <div style=" width: 65%; float: left; height: 100%; position: fixed; overflow: hidden; " id="kurvaZasrana">
-        <img src='<?php echo "./" . $foto; ?>' class='detailFotka zoomitC' style="float: left;">
+        <img src='<?php echo "./img/small/" . $foto; ?>' class='detailFotka zoomitC' style="float: left;">
     </div>
 
 
@@ -30,9 +29,15 @@
         <div style="display: table; height: 100%; width: 100%;"  id="zmrd">
             <div style="  vertical-align: middle;  display: table-cell; padding: 0 22px; text-align: left;"       >
 
-                <h1 style="text-align: center; margin: 10px 0;"><?php echo $nadpis; ?></h1>
-                <h4 style="text-align: center;">podkategorie <?php echo $podkategorie; ?></h4>
-                <img src="./img/foto/separator.png" style="margin: 10px auto; max-width: 400px;">
+                <h1 style="text-align: center; margin: 10px 0;"><?php echo $nazev; ?></h1>
+                <h4 style="text-align: center;"><?php
+    if (trim($podkategorie) == "brousene") {
+        echo "Hranované sklo";
+    } else{
+        echo $podkategorie;
+    }
+    ?></h4>
+                <img src="./img/foto/separator.png" style="margin: 10px auto; max-width: 400px; min-width: 100%;">
 
                 <p>
                 <table style="margin: 0;">
@@ -42,6 +47,10 @@
 
                 <b>Detail produktu:</b> <?php echo $obsah; ?>
                 <br><br>
+                Veškeré produkty jsou dostupné v těch barevných kombinacích, které jsou níže.<br>
+V případě zájmu o tento produkt, nás neváhejte kontaktovat.
+                <br><br>
+                <b>Rozměry (HxWxD):</b> <?php echo $rozmery; ?><br>
                 <b>Kod produktu:</b> <?php echo $kodProduktu; ?><br>
                 ostatní barevné varianty:
                 </p>
