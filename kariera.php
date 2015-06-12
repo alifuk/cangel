@@ -8,7 +8,7 @@
 
         <h2>KARIÉRA</h2>
         <img src="./img/foto/separator.png" style="margin: 10px auto; max-width: 400px;"> 
-        <h4 style="line-height: 1.6; color: #666;">Momentálně nehledáme další nové zaměstnance. Nepřestávejte však tuto stránku sledovat, jelikož se to každým dnem může změnit. 
+        <h4 style="line-height: 1.6; color: #666;">Aktuálně nehledáme nové zaměstnance
         </h4>
 
 

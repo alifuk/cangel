@@ -1,52 +1,18 @@
-<?php
-echo ' <h1 style="margin: 34px; display: block; text-align: center; text-transform: uppercase;"> ' . htmlspecialchars($_POST["param"]) . '</h1> </div>';
-?>
 
 
-<!--
-<div style="width:64px; margin: 21px auto;" class="noscroll" >
-
-    <span class="glyphicon glyphicon-chevron-left smerovac" aria-hidden="true" onclick="produktyDoleva()"></span>
-    <span class="glyphicon glyphicon-chevron-right smerovac" aria-hidden="true" onclick="produktyDoprava()"></span>
+<div style="width: 100%; box-sizing: border-box; height: 100%; padding: 20px;">
 
 
-</div>
+    <div style="width: 70%; max-width: 700px; margin: 9% auto 0 auto; text-align: center;">
 
 
-
-<div  id="produktBar" class="horizontal-only scroll-pane jspScrollable scroll-pane-arrows noscroll">
-
-    <div style="width: auto; position: absolute; ">
-        <table>
-            <tr>
-
-                <?php
-                $dir = './img/small/';
-                $files1 = array_diff(scandir($dir), array('..', '.'));;
-                //print_r($files1);
-                /*foreach ($files1 as $file) {
-
-                    echo "<td onclick=zobraz('detail' ,  'hodinky')>
-                    <div class=\"sProdukt pulseHover\">
-                        <img src=\"./img/small/" . $file . " \"><h4>Hodinky S3000</h4> 
-
-                    </div>
-                </td>";
-                }*/
-                ?>
+        <h2>Skleněná světla</h2>
+        <img src="./img/foto/separator.png" style="margin: 10px auto; max-width: 400px;"> 
+        <h4 style="line-height: 1.6; color: #666;">Již brzy... 
+        </h4>
 
 
-                
-            </tr>
-
-        </table>
     </div>
 
 
-
-
-
-
 </div>
-
--->

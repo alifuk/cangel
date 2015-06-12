@@ -12,8 +12,8 @@ while (!feof($file)) {
     $line = explode(";", fgets($file));
     
     
-    $stmt = $conn->prepare("INSERT INTO detaily (nazev, obsah, foto, nadpis, kodProduktu, material,podkategorie, rozmery) VALUES(?,?,?,?,?,?,?,?)");
-    $stmt->bind_param('ssssssss', $nazev, $obsah, $foto, $nadpis,$kodProduktu,$material,$podKategorie,$rozmery);
+    $stmt = $conn->prepare("INSERT INTO detaily (nazev, obsah, foto, nadpis, kodProduktu, material,podkategorie, rozmery, foto2, foto3, foto4) VALUES(?,?,?,?,?,?,?,?,?,?,?)");
+    $stmt->bind_param('sssssssssss', $nazev, $obsah, $foto, $nadpis,$kodProduktu,$material,$podKategorie,$rozmery,$foto2,$foto3,$foto4);
     
     $nazev = $line[0];
     $nadpis = $line[1];
@@ -23,6 +23,9 @@ while (!feof($file)) {
     $rozmery = $line[5];
     $obsah = $line[6];
     $foto= $line[7];
+    $foto2= $line[8];
+    $foto3= $line[9];
+    $foto4= $line[10];
     
     
     $stmt->execute();

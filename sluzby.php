@@ -1,9 +1,12 @@
 <div class="sluzbaBox" id="sluzbaBox">
     <div class="sluzba" onclick="zobraz('sluzba', 'foukane')">
+        <div style="display: table; width: 100%; position: absolute; height: 100%;">
+            <h4 class="sluzbaText">
+                Zakázková výroba ručně foukaného a uměleckého skla 
+            </h4> 
+        </div>
 
-        <h4 class="sluzbaText">
-            Zakázková výroba ručně foukaného a uměleckého skla 
-        </h4>
+
         <img class="sluzbaimg" src="./img/foto/image2.jpg" >
 
     </div>

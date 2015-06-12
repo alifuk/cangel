@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <!-- <link href="favicon.ico" rel="icon" type="image/png" /> -->
         <script src="./js/jquery-1.9.1.min.js"></script>
-
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <!-- Optional theme -->

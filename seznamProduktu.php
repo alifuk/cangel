@@ -1,6 +1,6 @@
 <?php
 echo ' <h1 style="margin: 34px; display: block; text-align: center; text-transform: uppercase;"> ';
-        if(htmlspecialchars($_POST["param"]) == brousene) {
+        if(htmlspecialchars($_POST["param"]) == "brousene") {
             echo "Broušené sklo";
         } else {
             echo htmlspecialchars($_POST["param"]);

@@ -1,10 +1,10 @@
 body{
-    font: normal 16px/25px "futura-pt",Arial,"Helvetica Neue",Helvetica,sans-serif;   
+    //font: normal 16px/25px "futura-pt",Arial,"Helvetica Neue",Helvetica,sans-serif;   
     -webkit-font-smoothing: antialiased;
     font-weight: 500;
     color: #000;
-    font-size: 14px;
-
+    font-size: 17px;
+    font-family: 'Source Sans Pro', sans-serif;
 
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -310,7 +310,7 @@ li:hover  a{
     -webkit-transform: rotateX(90deg); 
     transform: rotateX(90deg); 
     width: 100%;
-    height: 54px;
+    height: 52px;
     background-color: #000;
     position: absolute;
     transition: 0.3s ease-in-out;
@@ -407,7 +407,7 @@ li:hover  a{
 
 #obsah1, #obsah2{
     position: absolute;
-    top: 55px;
+    top: 51px;
     width: 100%;
 }
 
@@ -429,6 +429,8 @@ li:hover  a{
 
 .novinka h2{
     margin-top: 0;
+    font-size: 28px;
+    padding: 0 20px;
 }
 
 .novinka h4{
@@ -453,7 +455,7 @@ li:hover  a{
     position: absolute;
     display: table-cell;
     vertical-align: middle;
-    
+
     top: -9999px !important;
     bottom: -9999px !important;
     left: -9999px !important;
@@ -471,19 +473,15 @@ li:hover  a{
     //padding-top: 80px;
     z-index: 20;
     position: absolute;  
-    -webkit-transition:  1s; /* Safari */
-    transition:  1s;
+    -webkit-transition:  0.5s; /* Safari */
+    transition:  0.5s;
     cursor: pointer;
     display: table;
     vertical-align: middle;
 }
 
-.novinkaObsah:hover {
-    width: 50%;    
-    background-color: #EDEDED;
-}
-.novinka img:hover + .novinkaObsah{
-    width: 50%;
+.novinka:hover > .novinkaObsah{
+    width: 44%;
     background-color: #EDEDED;
 }
 
@@ -552,6 +550,7 @@ li:hover  a{
     overflow: hidden; /* hide the cropped portion */
     float: left;
     display: inline;
+    position: relative;
     -webkit-transition:  0.4s  ease-in-out; /* Safari */
     transition:  0.4s  ease-in-out;    
     opacity: 0.7;
@@ -570,7 +569,7 @@ li:hover  a{
 
 
 .sluzba:hover {
-    //width: 15%;
+    /*width: 15%;*/
     opacity: 1;
     border-width: 8px;
 
@@ -606,11 +605,11 @@ li:hover  a{
     vertical-align: middle;
     padding: 20px;
     /* height: 100%; */
-    display: block;
-    top: 50%;
+    display: table-cell;
+    top: 40%;
     /* left: 50%; */
-    -webkit-transform: translate(0%, -50%);
-    transform: translate(0%, -50%);
+    /*-webkit-transform: translate(0%, -50%);
+    transform: translate(0%, -50%);*/
     width: 12.5%;
     overflow: hidden;
     text-transform: uppercase;
