@@ -121,7 +121,7 @@
                 setTimeout(function () {
                     // Do something after 5 seconds
                     jssor_slider1.$GoTo(0);
-                    jssor_slider1.$Play();
+                    //jssor_slider1.$Play();
                 }, 2000);
             }
 
@@ -150,7 +150,7 @@
 </script>
 <!-- Jssor Slider Begin -->
 <!-- To move inline styles to css file/block, please specify a class name for each element. --> 
-<div style="position: relative; width: 100%; height: 100%; overflow: hidden;">
+<div style="position: absolute; width: 100%; height: 100%; overflow: hidden;">
     <div style="position: relative; left: 50%; width: 5000px; text-align: center; margin-left: -2500px;">
 
         <div id="slider1_container" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1800px; height: 900px">
@@ -165,7 +165,7 @@
             </div>
             <!-- Slides Container -->
             <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1800px;
-                 height: 900px; overflow: hidden;">
+                 height: 900px; overflow: hidden; ">
 
 
 
@@ -173,11 +173,11 @@
                 <div>
                     <img u="image" src="./img/foto/image2.jpg" class="zoomit"/>
                     <div u="caption" t="FADELEFT" du="800" t2="NO" class="slider-text"></div>
-                    <div u="caption" t="FADE"  t2="NO" class="slider-text white" style="top: 35%; ">The Studio
+                    <div u="caption" t="FADE"  t2="NO" class="slider-text white" style="display: table-cell; vertical-align: middle; top: 35%;"><h2>The Studio</h2>
 
 
-                        <div u="caption" t="CLIPLEFT" du="500" t2="FADELEFT" class="slider-text white" style="width: 400px; height: 1px; margin: 0 auto 30px auto; background-color: #FFF;"></div>
-                        <div u="caption" t="FADELEFT" du="800" t2="FADELEFT" class="slider-text white" >Premium handmade glass</div>
+                        <div u="caption" t="CLIPLEFT" du="500" t2="FADELEFT" class="slider-text white" style="width: 400px; height: 1px; margin: 0 auto 0px auto; background-color: #FFF;top:5px;"></div>
+                        <div u="caption" t="FADELEFT" du="800" t2="FADELEFT" class="slider-text white" ><h2>Premium handmade glass</h2></div>
 
                     </div>
 

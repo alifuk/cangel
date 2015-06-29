@@ -23,7 +23,7 @@
                 Nové internetové stránky v moderním designu, jsou zaměřeny především na přehledné a aktuální informování našich zákazníků. Na stránkách najdete aktuality z naší činnosti, nabídku služeb, nabídku našich produktů, kontakty a mnoho dalších informací.
                 Nově spuštěné stránky budeme průběžně doplňovat, pokud Vám nějaké informace na nových stránkách budou chybět, neváhejte nás kontaktovat s návrhem na vylepšení.    
 
-</h4>
+            </h4>
         </div>
     </div>
 
