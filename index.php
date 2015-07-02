@@ -55,6 +55,8 @@
             $(document).ready(function () {
 
                 //$("#hide").delay(200).fadeOut(500);
+                
+        
                 $("#" + spodniObsah).fadeTo("normal", 0);
                 $("#inner").delay(200).fadeIn(1000);
                 var ubehlo2sec = false;

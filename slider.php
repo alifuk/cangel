@@ -172,12 +172,14 @@
 
                 <div>
                     <img u="image" src="./img/foto/image2.jpg" class="zoomit"/>
-                    <div u="caption" t="FADELEFT" du="800" t2="NO" class="slider-text"></div>
-                    <div u="caption" t="FADE"  t2="NO" class="slider-text white" style="display: table-cell; vertical-align: middle; top: 35%;"><h2>The Studio</h2>
+                    
+                    
+                    <div u="caption" t="FADELEFT" du="500" t2="NO" class="slider-text"></div>
+                    <div u="caption" t="FADE"  t2="NO" class="slider-text white" style="top: 35%; ">The Studio
 
 
-                        <div u="caption" t="CLIPLEFT" du="500" t2="FADELEFT" class="slider-text white" style="width: 400px; height: 1px; margin: 0 auto 0px auto; background-color: #FFF;top:5px;"></div>
-                        <div u="caption" t="FADELEFT" du="800" t2="FADELEFT" class="slider-text white" ><h2>Premium handmade glass</h2></div>
+                        <div u="caption" t="CLIPLEFT" du="500" t2="FADELEFT" class="slider-text white" style="width: 400px; height: 1px; margin: 0 auto 30px auto; background-color: #FFF;"></div>
+                        <div u="caption" t="FADELEFT" du="800" t2="FADELEFT" class="slider-text white">Premium handmade glass</div>
 
                     </div>
 
