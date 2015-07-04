@@ -3,14 +3,14 @@
 <div class="novinka current">
 
     <div style="  width: 60%;  position: relative;  height: 100%;  overflow: hidden;  display: table;  float: left;">
-        <img src="./img/WEB/foto/reference_berdych1.jpg" class="novinkaFotka" style="float: left;">
+        <img src="./img/reference/reymont1.jpg" class="novinkaFotka" >
     </div>
     <div class="novinkaObsah" style="right: 0;">
         <div class='novinkaInner'>
             <p class="datum">7.6.2015</p>
-            <h2>Jakub Berdych - Dlouhodobá spolupráce na výrobě jeho produktů</h2>
+            <h2>Lukáš Rejmont – Trofeje pro surfaře</h2>
             <img src="./img/foto/separator.png" style="margin: 0px auto 10px auto; max-width: 400px;"> 
-            <h4>Panem Berdychem, jsme byli osloveni ohledně možné spolupráce na výrobě jeho produktové kolekce. Po výrobě pár vzorků a potom co se p. Berdychovi kvalita provedení líbila, jsme zahájili výrobu ve větší míře.</h4>
+            <h4>Lukášem jsme byli osloveni k výrobě trofejí v podobě surfařské vlny a medailí pro Quiksilver and Roxy Czech & Slovak Surfing Championship konané ve Francii.</h4>
         </div>
     </div>
 
@@ -19,20 +19,40 @@
 
 <div class="novinka">
 
-    <img src="./img/WEB/foto/reference_kovac1.JPG" class="novinkaFotka" style="float: right;">
+    <div style="  width: 60%;  position: relative;  height: 100%;  overflow: hidden;  display: table;  float: right;">
+        <img src="./img/reference/bubles.jpg" class="novinkaFotka" >
+    </div>
+
     <div class="novinkaObsah" style="left: 0;">
         <div class='novinkaInner'>
 
             <p class="datum">7.6.2015</p>
-            <h2>Emil Kováč – Designové barevné skleničky</h2>
+            <h2>Qubus – Yellow vase, Soap bubles</h2>
             <img src="./img/foto/separator.png" style="margin: 10px auto; max-width: 400px;"> 
-            <h4>Panem Kováčem, jsme byli osloveni ohledně vzorování a případné větší výroby designových skleniček. Po výrobě pár vzorků a potom co se p. Kováčovi kvalita provedení líbila, jsme zahájili výrobu dle zakázek.</h4>
+            <h4>Studiem Qubus jsme byli osloveni k výrobě designových produktů, které se z části tvarovali do forem a z části tvarovaných z volné ruky.</h4>
         </div>
     </div>
 
 </div>
 
+<div class="novinka ">
 
+    <div style="  width: 60%;  position: relative;  height: 100%;  overflow: hidden;  display: table;  float: left;">
+        <img src="./img/reference/vases1.jpg" class="novinkaFotka">
+    </div>
+    <div class="novinkaObsah" style="right: 0;">
+        <div class='novinkaInner'>
+            <p class="datum">7.6.2015</p>
+            <h2>Křehký – Limited colection vases</h2>
+            <img src="./img/foto/separator.png" style="margin: 0px auto 10px auto; max-width: 400px;"> 
+            <h4>Studiem Křehký jsme byli osloveni k výrobě výrobků z části foukaných do kovových forem a z části tvarovaných z volné ruky.</h4>
+        </div>
+    </div>
+
+
+</div>
+
+<div style="height: 30px;"></div>
 <script>
     $(".navigation").hide();
 
@@ -40,7 +60,7 @@
 
     $('div.novinka').first();
 
-    $('.novinka').height(($(window).height() - $(".navbar-fixed-top").height() - $(".navbar-bottom").height()) / 2);
+    $('.novinka').height(($(window).height() - $(".navbar-fixed-top").height() - $(".navbar-bottom").height()) / 2 +1);
 
     $('a.display').on('click', function (e) {
         e.preventDefault();

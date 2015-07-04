@@ -12,7 +12,7 @@ body{
     color: #000;
     font-size: 17px;
     //font-family: 'Source Sans Pro', sans-serif;
-    font-family: NeogreyRegular;
+    font-family: Helvetica;
     letter-spacing: 2px;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -1106,4 +1106,19 @@ li:hover  a{
 
     background-color: #555;
 
+}
+
+.flashButton{
+    padding: 20px;
+    border: 1px solid #000;
+    color: black;
+    border-radius: 2px;
+    transition: all 0.4s;
+    font-size: 22px;
+}
+
+.flashButton:hover{
+    border: 1px #000;
+    background-color: black;
+    color: #FFF;
 }

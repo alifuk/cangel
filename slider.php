@@ -171,26 +171,26 @@
 
 
                 <div>
-                    <img u="image" src="./img/foto/image2.jpg" class="zoomit"/>
+                    <img u="image" src="./img/slider/fm1.jpg" class="zoomit"/>
                     <div u="caption" t="FADELEFT" du="800" t2="NO" class="slider-text"></div>
-                    <div u="caption" t="FADE"  t2="NO" class="slider-text white" style="display: table-cell; vertical-align: middle; top: 35%;"><h2>The Studio</h2>
+                    <div u="caption" t="FADE"  t2="NO" class="slider-text white" style="top: 35%;"><h2>Ruční výroba luxusního hranovaného skla</h2>
 
 
                         <div u="caption" t="CLIPLEFT" du="500" t2="FADELEFT" class="slider-text white" style="width: 400px; height: 1px; margin: 0 auto 0px auto; background-color: #FFF;top:5px;"></div>
-                        <div u="caption" t="FADELEFT" du="800" t2="FADELEFT" class="slider-text white" ><h2>Premium handmade glass</h2></div>
+                        <div u="caption" t="FADELEFT" du="800" t2="FADELEFT" class="slider-text white" ><span class="flashButton" onclick="zobraz('produkty')">VÍCE INFORMACÍ</span></div>
 
                     </div>
 
                 </div>
 
                 <div>
-                    <img u="image" src="./img/foto/image4.jpg" class="zoomit" />
+                    <img u="image" src="./img/slider/fm2.jpg" class="zoomit" />
                     <div u="caption" t="FADELEFT" du="500" t2="NO" class="slider-text"></div>
-                    <div u="caption" t="FADE"  t2="NO" class="slider-text white" style="top: 35%; ">Výrobky ze skla
+                    <div u="caption" t="FADE"  t2="NO" class="slider-text white" style="top: 35%; "><h2>Zakázková výroba skla a jeho další zušlechťování</h2>
 
 
                         <div u="caption" t="CLIPLEFT" du="500" t2="FADELEFT" class="slider-text white" style="width: 400px; height: 1px; margin: 0 auto 30px auto; background-color: #FFF;"></div>
-                        <div u="caption" t="FADELEFT" du="800" t2="FADELEFT" class="slider-text white" >Umělecká galerie</div>
+                        <div u="caption" t="FADELEFT" du="800" t2="FADELEFT" class="slider-text white" ><span class="flashButton" onclick="zobraz('sluzby')">VÍCE INFORMACÍ</span></div>
 
                     </div>
 
@@ -198,13 +198,13 @@
 
 
                 <div>
-                    <img u="image" src="./img/foto/cerem.jpg" class="zoomit" />
+                    <img u="image" src="./img/slider/fm3.jpg" class="zoomit" />
                     <div u="caption" t="FADELEFT" du="500" t2="NO" class="slider-text"></div>
-                    <div u="caption" t="FADE"  t2="NO" class="slider-text white" style="top: 35%; ">Moderní design
+                    <div u="caption" t="FADE"  t2="NO" class="slider-text white" style="top: 35%; "><h2>Máme radost když naše produkty dělají radost</h2>
 
 
                         <div u="caption" t="CLIPLEFT" du="500" t2="FADELEFT" class="slider-text white" style="width: 400px; height: 1px; margin: 0 auto 30px auto; background-color: #FFF;"></div>
-                        <div u="caption" t="FADELEFT" du="800" t2="FADELEFT" class="slider-text white">tradiční postupy</div>
+                        <div u="caption" t="FADELEFT" du="800" t2="FADELEFT" class="slider-text white"><span class="flashButton" onclick="zobraz('reference')">VÍCE INFORMACÍ</span></div>
 
                     </div>
 
