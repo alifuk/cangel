@@ -171,6 +171,7 @@
 
 
                 <div>
+
                     <img u="image" src="./img/slider/fm1.jpg" class="zoomit"/>
                     <div u="caption" t="FADELEFT" du="800" t2="NO" class="slider-text"></div>
                     <div u="caption" t="FADE"  t2="NO" class="slider-text white" style="top: 35%;"><h2>Ruční výroba luxusního hranovaného skla</h2>
@@ -178,6 +179,7 @@
 
                         <div u="caption" t="CLIPLEFT" du="500" t2="FADELEFT" class="slider-text white" style="width: 400px; height: 1px; margin: 0 auto 0px auto; background-color: #FFF;top:5px;"></div>
                         <div u="caption" t="FADELEFT" du="800" t2="FADELEFT" class="slider-text white" ><span class="flashButton" onclick="zobraz('produkty')">VÍCE INFORMACÍ</span></div>
+
 
                     </div>
 

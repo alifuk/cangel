@@ -1,6 +1,11 @@
 @font-face {
-    font-family: NeogreyRegular;
-    src: url(NeogreyRegular.otf);
+    font-family: Medium;
+    src: url(./font/Medium.otf);
+}
+
+@font-face {
+    font-family: Light;
+    src: url(./font/Light.otf);
 }
 
 
@@ -10,9 +15,13 @@ body{
     -webkit-font-smoothing: antialiased;
     font-weight: 500;
     color: #000;
-    font-size: 17px;
+    font-size: 15px;
     //font-family: 'Source Sans Pro', sans-serif;
+<<<<<<< HEAD
     font-family: Helvetica;
+=======
+    font-family: Light;
+>>>>>>> origin/master
     letter-spacing: 2px;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -666,94 +675,84 @@ li:hover  a{
 
 
 .produktyBox{
-    width: 200%;
-    height: 100%;
-    position: fixed;    
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-    left: 0%;
-
+    width: 100%;
+    text-transform: uppercase;
+    position: relative; 
     cursor: pointer;
 
 }
 
 .boxDoleva {
-    -ms-transform: translate(-1.75%,0); /* IE 9 */
-    -webkit-transform: translate(-1.75%,0px); /* Safari */
-    transform: translate(-1.75%,0);
 }
 
 .produkt {
-    width: 12.5%; /* or whatever is required */
-    text-align: center; /* ensures the image is always in the h-middle */
-    overflow: hidden; /* hide the cropped portion */
     float: left;
-    display: inline;
-    -webkit-transition:  0.4s  ease-in-out; /* Safari */
-    transition:  0.4s  ease-in-out;    
-    opacity: 0.7;
-
-
+    overflow: hidden;
     border-style: solid;
-    border-width: 0px;
-    border-color: #FFF;
+    border-width: 2px;
+    border-color: #000;
 
-    border-top-style: none;
-    border-right-style: solid;
-    border-bottom-style: none;
-    border-left-style: solid;
 
 }
 
 
 .produkt:hover {
-    width: 14%;
-    opacity: 1;
-    border-width: 8px;
+   opacity: 0.8;
 
 }
 
 .produkt:hover > .sluzbaText{
     //width: 15%;
 
-    -webkit-transform: translate(10%, -50%);
-    transform: translate(10%, -50%);
 
 }
 
 .produktText{
 
+    position: absolute; /* allows repositioning */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: 25px;
     text-align: center;
-    font-size: 34px;
-    position: absolute;
+    font-size: 37px;
+    font-family: Medium;
     z-index: 10;
-    vertical-align: middle;
-    padding: 20px;
-    /* height: 100%; */
-    display: block;
-    top: 45%;
-    /* left: 50%; */
-    -webkit-transform: translate(0%, -50%);
-    transform: translate(0%, -50%);
-    width: 12.5%;
-    overflow: hidden;
-    text-transform: uppercase;
 
 
-    -webkit-transition:  0.4s  ease-in-out; /* Safari */
-    transition:  0.4s  ease-in-out;  
+
 }
 
 
 
 .produktimg {
-    position: relative; /* allows repositioning */
-    left: 100%; /* move the whole width of the image to the right */
-    margin-left: -200%; /* magic! */
-    min-height: 100%;
-    //float: left;
+    position: absolute; /* allows repositioning */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0.5;
+}
+
+.hranovane{
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.svetla{
+    width: 50%;
+    height: 50%;
+    position: relative;
+}
+
+.produktR{
+    width: 25%;
+    height: 50%;
+    position: relative;
 }
 
 
