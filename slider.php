@@ -186,7 +186,7 @@
                 </div>
 
                 <div>
-                    <img u="image" src="./img/slider/fm2.jpg" class="zoomit" />
+                    <img u="image" src="./img/slider/fm2.JPG" class="zoomit" />
                     <div u="caption" t="FADELEFT" du="500" t2="NO" class="slider-text"></div>
                     <div u="caption" t="FADE"  t2="NO" class="slider-text white" style="top: 35%; "><h2>Zakázková výroba skla a jeho další zušlechťování</h2>
 

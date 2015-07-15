@@ -12,7 +12,7 @@ echo ' <h1 style="margin: 34px; display: block; text-align: center; text-transfo
 
 <div style="width:64px; margin: 21px auto;" class="noscroll" >
 
-    <span class="glyphicon glyphicon-chevron-left smerovac" aria-hidden="true" onclick="produktyDoleva()"></span>
+    <span class="glyphicon glyphicon-chevron-left smerovac" aria-hidden="true" onclick="produktyDoleva()" style="float: left;"></span>
     <span class="glyphicon glyphicon-chevron-right smerovac" aria-hidden="true" onclick="produktyDoprava()"></span>
 
 

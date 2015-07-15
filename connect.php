@@ -1,12 +1,21 @@
 <?php
 
-
+/*
 $servername = "localhost";
 $username = "root";
 $password = "";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, "cangel");
+*/
+
+
+$servername = "c058um.forpsi.com";
+$username = "f67399";
+$password = "559tH2E";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, "f67399");
 
 
 /*

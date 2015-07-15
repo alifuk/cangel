@@ -58,16 +58,7 @@ function nastavVelikosti(){
     var innerVyska = oknoHeight - $(".navbar-fixed-top").height() - $(".navbar-bottom").height();
     
     $(".produktyBox").height(innerVyska);
-    
-    
-    
-    
-    
-    
 };
-    
-    
-    
     
 </script>
 

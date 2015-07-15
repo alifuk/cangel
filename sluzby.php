@@ -1,3 +1,5 @@
+<!--
+
 <div class="sluzbaBox" id="sluzbaBox">
 
     <div class="sluzba" onclick="zobraz('sluzba', 'foukane')" style="z-index: 10; left: 0%;  ">
@@ -85,7 +87,7 @@
     
     -->
 
-    <script>
+    <script>/*
 
         $(document).ready(function () {
             $(".sloupec").width($(window).width() / 4);
@@ -96,8 +98,77 @@
             $(".sloupec").width($(window).width() / 4);
             $(".sloupec").height($(window).height());
         });
+        
+        */
 
     </script>
+
+    
+    
+    
+    
+
+
+
+
+
+
+<div class="produktyBox" id="produktyBox">
+    <div class="produkt hranovane" onclick="zobraz('sluzba', 'foukane')">
+
+        <h4 class="produktText">
+            Zakázková výroba ručně foukaného a uměleckého skla 
+        </h4>
+        <img class="produktimg" src="./img/sluzby/vyrobasklamenu.jpg" >
+
+    </div>
+    <div class="produkt svetla" onclick="zobraz('sluzba', 'pelcove')">
+        <h4 class="produktText">
+            Výroba sklářských dřevěných a pecoldových forem
+        </h4>
+        <img class="produktimg " src="./img/sluzby/formy.JPG" >
+
+    </div>
+    
+    
+    
+    <div class="produkt produktR" onclick="zobraz('sluzba', 'brouseni')">
+        <h4 class="produktText">
+            Broušení, řezání a vrtání skla
+        </h4>
+        <img class="produktimg" src="./img/sluzby/brousenimenu.JPG">
+    </div>
+    
+    <div class="produkt produktR" onclick="zobraz('sluzba', 'piskovani')">
+        <h4 class="produktText sluzbaTextRR">
+            Pískování a lepení skla
+        </h4>
+        <img class="produktimg" src="./img/foto/cerem.jpg">
+    </div>
+    
+</div>
+
+
+<script>
+    
+$(document).ready(function(){
+    nastavVelikosti();
+    
+}); 
+
+$(window).resize(function(){
+    nastavVelikosti();
+});
+
+function nastavVelikosti(){
+    
+    var oknoHeight = $(window).height();
+    var innerVyska = oknoHeight - $(".navbar-fixed-top").height() - $(".navbar-bottom").height();
+    
+    $(".produktyBox").height(innerVyska);
+};
+    
+</script>
 
 
 

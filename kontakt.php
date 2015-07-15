@@ -17,7 +17,7 @@
 
                 <h1>KONTAKT</h1>
 
-                <img src="./img/foto/separator.png" style="margin: 10px auto; max-width: 400px; min-height: 30px; max-height: 30px;">
+                <img src="./img/foto/separator.png" style="margin: 10px auto; max-width: 400px; min-height: 30px; max-height: 30px; left: 0;transform: none;">
                 <p><b>The Studio</b><br>
                     Skalice u České Lípy 452<br>
                     471 17 Skalice<br>
